@@ -6,7 +6,6 @@
 package pack;
 
 import com.placeholder.PlaceHolder;
-import java.awt.Color;
 import javax.swing.ImageIcon;
 
 /**
@@ -28,17 +27,25 @@ public class test extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         
-        // place holder for login form
         
+        // place holder for login form
         // placeholders for username and password
         holder = new PlaceHolder(uname, "Enter your username");
         holder = new PlaceHolder(pword, "Enter your password");
         // placeholders for username and password
-        
+        // place holder for login form
         
         // placeholders for add product
-        
-        // place holder for login form
+        holder = new PlaceHolder(productType,"e.g. Princess Paint");
+        holder = new PlaceHolder(paintType, "e.g. Texture");
+        holder = new PlaceHolder(paintCode, "e.g. 1712");
+        holder = new PlaceHolder(litres, "e.g. 20 Litres");
+        holder = new PlaceHolder(paintColor, "e.g Rose Pink");
+        holder = new PlaceHolder(sellingPrice, "20,000");
+        holder = new PlaceHolder(costPrice, "20,000");
+        holder = new PlaceHolder(masterCode, "e.g 1712PT");
+        holder = new PlaceHolder(producerName, "e.g YSR Company");
+        holder = new PlaceHolder(dateAdded, "2018 - 08 - 15");
 
     }
     
@@ -54,6 +61,30 @@ public class test extends javax.swing.JFrame {
     private void initComponents() {
 
         mainPanel = new javax.swing.JPanel();
+        overview = new javax.swing.JPanel();
+        formPanel = new javax.swing.JPanel();
+        signinform = new javax.swing.JPanel();
+        settings = new javax.swing.JLabel();
+        gobtn = new javax.swing.JLabel();
+        pword = new javax.swing.JPasswordField();
+        uname = new javax.swing.JTextField();
+        roundrect5 = new javax.swing.JLabel();
+        roundrect = new javax.swing.JLabel();
+        mock = new javax.swing.JLabel();
+        logoName = new javax.swing.JLabel();
+        clr = new javax.swing.JLabel();
+        bcg = new javax.swing.JLabel();
+        menu = new javax.swing.JPanel();
+        p1 = new javax.swing.JPanel();
+        m_prdts = new javax.swing.JLabel();
+        m_cuts = new javax.swing.JLabel();
+        m_manAdm = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        clr1 = new javax.swing.JLabel();
+        bcgWhite = new javax.swing.JLabel();
+        bcg1 = new javax.swing.JLabel();
         products = new javax.swing.JPanel();
         pAV = new javax.swing.JPanel();
         pAddp = new javax.swing.JPanel();
@@ -100,7 +131,7 @@ public class test extends javax.swing.JFrame {
         bcgmasCod2 = new javax.swing.JLabel();
         bcgproducer2 = new javax.swing.JLabel();
         bcgDate2 = new javax.swing.JLabel();
-        bcgaddImg2 = new javax.swing.JLabel();
+        editPrdtbtn = new javax.swing.JLabel();
         bcgproductAdd2 = new javax.swing.JLabel();
         sidebar = new javax.swing.JPanel();
         menuProducts = new javax.swing.JLabel();
@@ -111,34 +142,123 @@ public class test extends javax.swing.JFrame {
         clr2 = new javax.swing.JLabel();
         bcgWhite1 = new javax.swing.JLabel();
         bcg3 = new javax.swing.JLabel();
-        menu = new javax.swing.JPanel();
-        p1 = new javax.swing.JPanel();
-        m_prdts = new javax.swing.JLabel();
-        m_cuts = new javax.swing.JLabel();
-        m_manAdm = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        clr1 = new javax.swing.JLabel();
-        bcgWhite = new javax.swing.JLabel();
-        bcg1 = new javax.swing.JLabel();
-        overview = new javax.swing.JPanel();
-        formPanel = new javax.swing.JPanel();
-        signinform = new javax.swing.JPanel();
-        settings = new javax.swing.JLabel();
-        gobtn = new javax.swing.JLabel();
-        pword = new javax.swing.JPasswordField();
-        uname = new javax.swing.JTextField();
-        roundrect5 = new javax.swing.JLabel();
-        roundrect = new javax.swing.JLabel();
-        mock = new javax.swing.JLabel();
-        logoName = new javax.swing.JLabel();
-        clr = new javax.swing.JLabel();
-        bcg = new javax.swing.JLabel();
+        viewProducts = new javax.swing.JPanel();
+        btnAddprdt1 = new javax.swing.JLabel();
+        btnViewprdt1 = new javax.swing.JLabel();
+        scrollVP = new javax.swing.JScrollPane();
+        pVP = new javax.swing.JPanel();
+        sidebar1 = new javax.swing.JPanel();
+        menuProducts1 = new javax.swing.JLabel();
+        clr3 = new javax.swing.JLabel();
+        whiteBcgg1 = new javax.swing.JLabel();
+        bcgWhite2 = new javax.swing.JLabel();
+        bcg2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         mainPanel.setLayout(new java.awt.CardLayout());
+
+        overview.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        formPanel.setOpaque(false);
+        formPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        signinform.setOpaque(false);
+        signinform.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        settings.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        settings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/left.png"))); // NOI18N
+        signinform.add(settings, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
+
+        gobtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        gobtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/right.png"))); // NOI18N
+        signinform.add(gobtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, -1, -1));
+
+        pword.setFont(new java.awt.Font("Futura Hv BT", 0, 15)); // NOI18N
+        pword.setBorder(null);
+        signinform.add(pword, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 282, 50));
+
+        uname.setFont(new java.awt.Font("Futura Hv BT", 0, 15)); // NOI18N
+        uname.setBorder(null);
+        signinform.add(uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 282, 50));
+
+        roundrect5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        roundrect5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/tect.png"))); // NOI18N
+        signinform.add(roundrect5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 440, 140));
+
+        roundrect.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        roundrect.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/tect.png"))); // NOI18N
+        signinform.add(roundrect, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 440, 140));
+
+        formPanel.add(signinform, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 490, 560));
+
+        overview.add(formPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 490, 560));
+
+        mock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        mock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/mcokup-2.png"))); // NOI18N
+        overview.add(mock, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 160, -1, -1));
+
+        logoName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logoName.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Inventory Management.png"))); // NOI18N
+        overview.add(logoName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 470, 60));
+
+        clr.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
+        overview.add(clr, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 680, -1, -1));
+
+        bcg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
+        overview.add(bcg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        mainPanel.add(overview, "card3");
+
+        menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        p1.setOpaque(false);
+        p1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        m_prdts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        m_prdts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/products.png"))); // NOI18N
+        m_prdts.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                m_prdtsMouseClicked(evt);
+            }
+        });
+        p1.add(m_prdts, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
+
+        m_cuts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        m_cuts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/customers.png"))); // NOI18N
+        p1.add(m_cuts, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 60, -1, -1));
+
+        m_manAdm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        m_manAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/manageAdmins.png"))); // NOI18N
+        p1.add(m_manAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, -1, -1));
+
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/menu.png"))); // NOI18N
+        p1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 330, -1, -1));
+
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/menu.png"))); // NOI18N
+        p1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, -1, -1));
+
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/invoice.png"))); // NOI18N
+        p1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
+
+        menu.add(p1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 1160, 620));
+
+        clr1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clr1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
+        menu.add(clr1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 710, -1, -1));
+
+        bcgWhite.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgWhite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle.png"))); // NOI18N
+        menu.add(bcgWhite, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, -1, -1));
+
+        bcg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
+        menu.add(bcg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        mainPanel.add(menu, "card5");
 
         products.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -313,9 +433,14 @@ public class test extends javax.swing.JFrame {
         bcgDate2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/date.png"))); // NOI18N
         pViewp.add(bcgDate2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, -1, -1));
 
-        bcgaddImg2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgaddImg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/editProduct.png"))); // NOI18N
-        pViewp.add(bcgaddImg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, -1, -1));
+        editPrdtbtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        editPrdtbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/editProduct.png"))); // NOI18N
+        editPrdtbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                editPrdtbtnMouseClicked(evt);
+            }
+        });
+        pViewp.add(editPrdtbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, -1, -1));
 
         bcgproductAdd2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         bcgproductAdd2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/savept.png"))); // NOI18N
@@ -374,102 +499,72 @@ public class test extends javax.swing.JFrame {
 
         mainPanel.add(products, "card4");
 
-        menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        viewProducts.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        p1.setOpaque(false);
-        p1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        btnAddprdt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnAddprdt1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/addPrdt.png"))); // NOI18N
+        btnAddprdt1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddprdt1MouseClicked(evt);
+            }
+        });
+        viewProducts.add(btnAddprdt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, -1, -1));
 
-        m_prdts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        m_prdts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/products.png"))); // NOI18N
-        p1.add(m_prdts, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
+        btnViewprdt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnViewprdt1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/viewprdt.png"))); // NOI18N
+        btnViewprdt1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnViewprdt1MouseClicked(evt);
+            }
+        });
+        viewProducts.add(btnViewprdt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(435, 70, -1, -1));
 
-        m_cuts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        m_cuts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/customers.png"))); // NOI18N
-        p1.add(m_cuts, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 60, -1, -1));
+        scrollVP.setHorizontalScrollBar(null);
+        scrollVP.setOpaque(false);
 
-        m_manAdm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        m_manAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/manageAdmins.png"))); // NOI18N
-        p1.add(m_manAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, -1, -1));
+        pVP.setOpaque(false);
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/menu.png"))); // NOI18N
-        p1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 330, -1, -1));
+        javax.swing.GroupLayout pVPLayout = new javax.swing.GroupLayout(pVP);
+        pVP.setLayout(pVPLayout);
+        pVPLayout.setHorizontalGroup(
+            pVPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1017, Short.MAX_VALUE)
+        );
+        pVPLayout.setVerticalGroup(
+            pVPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 487, Short.MAX_VALUE)
+        );
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/menu.png"))); // NOI18N
-        p1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, -1, -1));
+        scrollVP.setViewportView(pVP);
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/menu.png"))); // NOI18N
-        p1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
+        viewProducts.add(scrollVP, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 143, 1020, 490));
 
-        menu.add(p1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 1160, 620));
+        sidebar1.setOpaque(false);
+        sidebar1.setPreferredSize(new java.awt.Dimension(55, 565));
+        sidebar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        clr1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        clr1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
-        menu.add(clr1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 710, -1, -1));
+        menuProducts1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        menuProducts1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/mP.png"))); // NOI18N
+        sidebar1.add(menuProducts1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        bcgWhite.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgWhite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle.png"))); // NOI18N
-        menu.add(bcgWhite, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, -1, -1));
+        viewProducts.add(sidebar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 69, -1, -1));
 
-        bcg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
-        menu.add(bcg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        clr3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clr3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
+        viewProducts.add(clr3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 710, -1, -1));
 
-        mainPanel.add(menu, "card5");
+        whiteBcgg1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        whiteBcgg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle1.png"))); // NOI18N
+        viewProducts.add(whiteBcgg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 140, -1, -1));
 
-        overview.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        bcgWhite2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgWhite2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle.png"))); // NOI18N
+        viewProducts.add(bcgWhite2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, -1, -1));
 
-        formPanel.setOpaque(false);
-        formPanel.setLayout(new java.awt.CardLayout());
+        bcg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
+        viewProducts.add(bcg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        signinform.setOpaque(false);
-        signinform.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        settings.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        settings.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/left.png"))); // NOI18N
-        signinform.add(settings, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 310, -1, -1));
-
-        gobtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        gobtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/right.png"))); // NOI18N
-        signinform.add(gobtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, -1, -1));
-
-        pword.setFont(new java.awt.Font("Futura Hv BT", 0, 15)); // NOI18N
-        pword.setBorder(null);
-        signinform.add(pword, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 282, 50));
-
-        uname.setFont(new java.awt.Font("Futura Hv BT", 0, 15)); // NOI18N
-        uname.setBorder(null);
-        signinform.add(uname, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 282, 50));
-
-        roundrect5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        roundrect5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/tect.png"))); // NOI18N
-        signinform.add(roundrect5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 440, 140));
-
-        roundrect.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        roundrect.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/tect.png"))); // NOI18N
-        signinform.add(roundrect, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 440, 140));
-
-        formPanel.add(signinform, "card2");
-
-        overview.add(formPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, 490, 560));
-
-        mock.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        mock.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/mcokup-2.png"))); // NOI18N
-        overview.add(mock, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 160, -1, -1));
-
-        logoName.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        logoName.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Inventory Management.png"))); // NOI18N
-        overview.add(logoName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 470, 60));
-
-        clr.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        clr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
-        overview.add(clr, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 680, -1, -1));
-
-        bcg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
-        overview.add(bcg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        mainPanel.add(overview, "card3");
+        mainPanel.add(viewProducts, "card5");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -510,6 +605,33 @@ public class test extends javax.swing.JFrame {
         pAV.repaint();
     }//GEN-LAST:event_btnAddprdtMouseClicked
 
+    private void m_prdtsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_m_prdtsMouseClicked
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_m_prdtsMouseClicked
+
+    private void btnAddprdt1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddprdt1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAddprdt1MouseClicked
+
+    private void btnViewprdt1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewprdt1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnViewprdt1MouseClicked
+
+    private void editPrdtbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editPrdtbtnMouseClicked
+        productType2.setEditable(true);
+        paintType2.setEditable(true);
+        paintCode2.setEditable(true);
+        litres2.setEditable(true);
+        paintColor2.setEditable(true);
+        sellingPrice2.setEditable(true);
+        costPrice2.setEditable(true);
+        masterCode2.setEditable(true);
+        producerName2.setEditable(true);
+        dateAdded2.setEditable(true);
+    }//GEN-LAST:event_editPrdtbtnMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -548,12 +670,13 @@ public class test extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel bcg;
     private javax.swing.JLabel bcg1;
+    private javax.swing.JLabel bcg2;
     private javax.swing.JLabel bcg3;
     private javax.swing.JLabel bcgDate;
     private javax.swing.JLabel bcgDate2;
     private javax.swing.JLabel bcgWhite;
     private javax.swing.JLabel bcgWhite1;
-    private javax.swing.JLabel bcgaddImg2;
+    private javax.swing.JLabel bcgWhite2;
     private javax.swing.JLabel bcgcostp;
     private javax.swing.JLabel bcgcostp2;
     private javax.swing.JLabel bcgltrs;
@@ -575,15 +698,19 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JLabel bcgsellP;
     private javax.swing.JLabel bcgsellP2;
     private javax.swing.JLabel btnAddprdt;
+    private javax.swing.JLabel btnAddprdt1;
     private javax.swing.JLabel btnViewprdt;
+    private javax.swing.JLabel btnViewprdt1;
     private javax.swing.JLabel btnback;
     private javax.swing.JLabel clr;
     private javax.swing.JLabel clr1;
     private javax.swing.JLabel clr2;
+    private javax.swing.JLabel clr3;
     private javax.swing.JTextField costPrice;
     private javax.swing.JTextField costPrice2;
     private javax.swing.JTextField dateAdded;
     private javax.swing.JTextField dateAdded2;
+    private javax.swing.JLabel editPrdtbtn;
     private javax.swing.JPanel formPanel;
     private javax.swing.JLabel gobtn;
     private javax.swing.JLabel jLabel1;
@@ -601,11 +728,13 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JTextField masterCode2;
     private javax.swing.JPanel menu;
     private javax.swing.JLabel menuProducts;
+    private javax.swing.JLabel menuProducts1;
     private javax.swing.JLabel mock;
     private javax.swing.JPanel overview;
     private javax.swing.JPanel p1;
     private javax.swing.JPanel pAV;
     private javax.swing.JPanel pAddp;
+    private javax.swing.JPanel pVP;
     private javax.swing.JPanel pViewp;
     private javax.swing.JTextField paintCode;
     private javax.swing.JTextField paintCode2;
@@ -621,12 +750,16 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JPasswordField pword;
     private javax.swing.JLabel roundrect;
     private javax.swing.JLabel roundrect5;
+    private javax.swing.JScrollPane scrollVP;
     private javax.swing.JTextField sellingPrice;
     private javax.swing.JTextField sellingPrice2;
     private javax.swing.JLabel settings;
     private javax.swing.JPanel sidebar;
+    private javax.swing.JPanel sidebar1;
     private javax.swing.JPanel signinform;
     private javax.swing.JTextField uname;
+    private javax.swing.JPanel viewProducts;
     private javax.swing.JLabel whiteBcgg;
+    private javax.swing.JLabel whiteBcgg1;
     // End of variables declaration//GEN-END:variables
 }
