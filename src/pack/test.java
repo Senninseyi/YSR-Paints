@@ -6,6 +6,7 @@
 package pack;
 
 import com.placeholder.PlaceHolder;
+import java.awt.Font;
 import javax.swing.ImageIcon;
 
 /**
@@ -27,6 +28,7 @@ public class test extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setResizable(false);
         
+//        bcgproductAdd3.setFont(new Font("Futura", Font.BOLD, 13));
         
         // place holder for login form
         // placeholders for username and password
@@ -47,9 +49,29 @@ public class test extends javax.swing.JFrame {
         holder = new PlaceHolder(producerName, "e.g YSR Company");
         holder = new PlaceHolder(dateAdded, "2018 - 08 - 15");
 
+        //invisibles();
+        
+        //place holder for delete product
+        holder = new PlaceHolder(masterSearch, "Input master code here !!!");
+        //place holder for delete product
+        
+        //place holder for paint-details
+        holder = new PlaceHolder(pdProductType, "Princess Paint");
+        holder = new PlaceHolder(pdPaintType, "Texture");
+        holder = new PlaceHolder(pdPaintColor, "e.g. Red");
+        holder = new PlaceHolder(pdPaintCode,"e.g. 1712");
+        //place holder for paint-details
     }
     
-
+    public void visibles(){
+        //sidebar.setVisible(true);
+        btnAddprdt.setVisible(true);
+        btnViewprdt.setVisible(true);
+        btnDeleteprdt.setVisible(true);
+//        sidebar.setVisible(true);
+    }
+    
+    
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -79,14 +101,18 @@ public class test extends javax.swing.JFrame {
         m_prdts = new javax.swing.JLabel();
         m_cuts = new javax.swing.JLabel();
         m_manAdm = new javax.swing.JLabel();
+        m_invoice = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
         clr1 = new javax.swing.JLabel();
         bcgWhite = new javax.swing.JLabel();
         bcg1 = new javax.swing.JLabel();
         products = new javax.swing.JPanel();
         pAV = new javax.swing.JPanel();
+        menuPrdts = new javax.swing.JPanel();
+        paintProductPanel = new javax.swing.JLabel();
+        otherProductPanel = new javax.swing.JLabel();
+        paintDetails = new javax.swing.JLabel();
         pAddp = new javax.swing.JPanel();
         dateAdded = new javax.swing.JTextField();
         producerName = new javax.swing.JTextField();
@@ -98,6 +124,16 @@ public class test extends javax.swing.JFrame {
         paintCode = new javax.swing.JTextField();
         paintType = new javax.swing.JTextField();
         productType = new javax.swing.JTextField();
+        chevronDown4 = new javax.swing.JLabel();
+        chevronUp4 = new javax.swing.JLabel();
+        chevronUp3 = new javax.swing.JLabel();
+        chevronDown3 = new javax.swing.JLabel();
+        chevronUp2 = new javax.swing.JLabel();
+        chevronDown2 = new javax.swing.JLabel();
+        chevronUp1 = new javax.swing.JLabel();
+        chevronDown1 = new javax.swing.JLabel();
+        chevronDown = new javax.swing.JLabel();
+        chevronUp = new javax.swing.JLabel();
         bcgproTy = new javax.swing.JLabel();
         bcgpaTy = new javax.swing.JLabel();
         bcgpaCo = new javax.swing.JLabel();
@@ -110,17 +146,240 @@ public class test extends javax.swing.JFrame {
         bcgDate = new javax.swing.JLabel();
         bcgproductAdd = new javax.swing.JLabel();
         pViewp = new javax.swing.JPanel();
+        pViewp2 = new javax.swing.JPanel();
+        searchPanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        bcgPrice1 = new javax.swing.JLabel();
+        bcgPrice = new javax.swing.JLabel();
+        bcgtitle = new javax.swing.JLabel();
+        bcgBusinessSearch = new javax.swing.JLabel();
+        searchBy = new javax.swing.JLabel();
+        modalView = new javax.swing.JPanel();
+        dateAdded4 = new javax.swing.JTextField();
+        producerName4 = new javax.swing.JTextField();
+        masterCode4 = new javax.swing.JTextField();
+        costPrice4 = new javax.swing.JTextField();
+        sellingPrice4 = new javax.swing.JTextField();
+        paintColor4 = new javax.swing.JTextField();
+        litres4 = new javax.swing.JTextField();
+        paintCode4 = new javax.swing.JTextField();
+        paintType4 = new javax.swing.JTextField();
+        productType4 = new javax.swing.JTextField();
+        bcgproTy4 = new javax.swing.JLabel();
+        bcgpaTy4 = new javax.swing.JLabel();
+        bcgpaCo4 = new javax.swing.JLabel();
+        bcgltrs4 = new javax.swing.JLabel();
+        bcgpaCol4 = new javax.swing.JLabel();
+        bcgsellP4 = new javax.swing.JLabel();
+        bcgcostp4 = new javax.swing.JLabel();
+        bcgmasCod4 = new javax.swing.JLabel();
+        bcgproducer4 = new javax.swing.JLabel();
+        bcgDate4 = new javax.swing.JLabel();
+        editPrdtbtn2 = new javax.swing.JLabel();
+        bcgproductAdd4 = new javax.swing.JLabel();
+        pDeletep = new javax.swing.JPanel();
+        masterSearch = new javax.swing.JTextField();
+        dateAdded3 = new javax.swing.JTextField();
+        producerName3 = new javax.swing.JTextField();
+        masterCode3 = new javax.swing.JTextField();
+        costPrice3 = new javax.swing.JTextField();
+        sellingPrice3 = new javax.swing.JTextField();
+        paintColor3 = new javax.swing.JTextField();
+        litres3 = new javax.swing.JTextField();
+        paintCode3 = new javax.swing.JTextField();
+        paintType3 = new javax.swing.JTextField();
+        productType3 = new javax.swing.JTextField();
+        bcgproTy3 = new javax.swing.JLabel();
+        bcgpaTy3 = new javax.swing.JLabel();
+        bcgpaCo3 = new javax.swing.JLabel();
+        bcgltrs3 = new javax.swing.JLabel();
+        bcgpaCol3 = new javax.swing.JLabel();
+        bcgsellP3 = new javax.swing.JLabel();
+        bcgcostp3 = new javax.swing.JLabel();
+        bcgmasCod3 = new javax.swing.JLabel();
+        bcgproducer3 = new javax.swing.JLabel();
+        bcgDate3 = new javax.swing.JLabel();
+        editPrdtbtn1 = new javax.swing.JLabel();
+        bcgproductAdd3 = new javax.swing.JLabel();
+        whiteBcgg = new javax.swing.JLabel();
+        btnDeleteprdt = new javax.swing.JLabel();
+        btnViewprdt = new javax.swing.JLabel();
+        btnAddprdt = new javax.swing.JLabel();
+        btnback = new javax.swing.JLabel();
+        clr2 = new javax.swing.JLabel();
+        bcgWhite1 = new javax.swing.JLabel();
+        bcg3 = new javax.swing.JLabel();
+        paintDetail = new javax.swing.JPanel();
+        pdPaintColor = new javax.swing.JTextField();
+        pdPaintCode = new javax.swing.JTextField();
+        pdPaintType = new javax.swing.JTextField();
+        pdProductType = new javax.swing.JTextField();
+        submit = new javax.swing.JLabel();
+        bcgpdPaintColor = new javax.swing.JLabel();
+        bcgpdPaintCode = new javax.swing.JLabel();
+        bcgpdPaintType = new javax.swing.JLabel();
+        bcgpdProductType = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
+        BcgpaintDetailwhite = new javax.swing.JLabel();
+        paintDetback = new javax.swing.JLabel();
+        clr5 = new javax.swing.JLabel();
+        bcgWhite4 = new javax.swing.JLabel();
+        bcg2 = new javax.swing.JLabel();
+        otherproducts = new javax.swing.JPanel();
+        otherProductsPane = new javax.swing.JPanel();
+        addOtherproduct = new javax.swing.JPanel();
+        otherProductrate1 = new javax.swing.JTextField();
+        otherProductname1 = new javax.swing.JTextField();
+        in1 = new javax.swing.JTextField();
+        masterCode7 = new javax.swing.JTextField();
+        otherProductCostPrice1 = new javax.swing.JTextField();
+        otherProducttype1 = new javax.swing.JTextField();
+        chevronUp6 = new javax.swing.JLabel();
+        chevronDown6 = new javax.swing.JLabel();
+        chevronUp5 = new javax.swing.JLabel();
+        chevronDown5 = new javax.swing.JLabel();
+        bcgrate1 = new javax.swing.JLabel();
+        bcgname1 = new javax.swing.JLabel();
+        bgIn1 = new javax.swing.JLabel();
+        bgotherproductType1 = new javax.swing.JLabel();
+        bcgcostp7 = new javax.swing.JLabel();
+        bcgmasCod7 = new javax.swing.JLabel();
+        bcgproductAdd7 = new javax.swing.JLabel();
+        viewOtherproduct = new javax.swing.JPanel();
+        viewsearchPanel = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        bcgPrice2 = new javax.swing.JLabel();
+        bcgtitle2 = new javax.swing.JLabel();
+        bcgBusinessSearch2 = new javax.swing.JLabel();
+        searchBy2 = new javax.swing.JLabel();
+        viewOtherproductEdit = new javax.swing.JPanel();
+        otherProductrate3 = new javax.swing.JTextField();
+        otherProductname3 = new javax.swing.JTextField();
+        in3 = new javax.swing.JTextField();
+        masterCode9 = new javax.swing.JTextField();
+        otherProductCostPrice3 = new javax.swing.JTextField();
+        otherProducttype3 = new javax.swing.JTextField();
+        chevronUp9 = new javax.swing.JLabel();
+        chevronDown9 = new javax.swing.JLabel();
+        chevronUp10 = new javax.swing.JLabel();
+        chevronDown10 = new javax.swing.JLabel();
+        bcgrate3 = new javax.swing.JLabel();
+        bcgname3 = new javax.swing.JLabel();
+        bgIn3 = new javax.swing.JLabel();
+        bgotherproductType3 = new javax.swing.JLabel();
+        bcgcostp9 = new javax.swing.JLabel();
+        bcgmasCod9 = new javax.swing.JLabel();
+        saveOtherproduct = new javax.swing.JLabel();
+        editOtherproduct = new javax.swing.JLabel();
+        deleteOtherproduct = new javax.swing.JPanel();
+        otherProductrate2 = new javax.swing.JTextField();
+        otherProductname2 = new javax.swing.JTextField();
+        in2 = new javax.swing.JTextField();
+        masterCode8 = new javax.swing.JTextField();
+        otherProductCostPrice2 = new javax.swing.JTextField();
+        otherProducttype2 = new javax.swing.JTextField();
+        bcgrate2 = new javax.swing.JLabel();
+        bcgname2 = new javax.swing.JLabel();
+        bgIn2 = new javax.swing.JLabel();
+        bgotherproductType2 = new javax.swing.JLabel();
+        bcgcostp8 = new javax.swing.JLabel();
+        bcgmasCod8 = new javax.swing.JLabel();
+        bcgproductAdd8 = new javax.swing.JLabel();
+        whiteBcgg1 = new javax.swing.JLabel();
+        OtherprdtbtnDelete = new javax.swing.JLabel();
+        OtherprdtbtnView = new javax.swing.JLabel();
+        OtherprdtbtnAdd = new javax.swing.JLabel();
+        btnbackHome = new javax.swing.JLabel();
+        clr3 = new javax.swing.JLabel();
+        bcgWhite3 = new javax.swing.JLabel();
+        bcg5 = new javax.swing.JLabel();
+        customers = new javax.swing.JPanel();
+        cAV = new javax.swing.JPanel();
+        addCustomer = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        txtaddress = new javax.swing.JTextArea();
+        jTextField5 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jTextField1 = new javax.swing.JTextField();
+        dateAdded1 = new javax.swing.JTextField();
+        producerName1 = new javax.swing.JTextField();
+        masterCode1 = new javax.swing.JTextField();
+        costPrice1 = new javax.swing.JTextField();
+        sellingPrice1 = new javax.swing.JTextField();
+        litres1 = new javax.swing.JTextField();
+        paintCode1 = new javax.swing.JTextField();
+        txtTitle = new javax.swing.JTextField();
+        txtBusinessName = new javax.swing.JTextField();
+        bcgproTy1 = new javax.swing.JLabel();
+        bcgpaTy1 = new javax.swing.JLabel();
+        bcgpaCo1 = new javax.swing.JLabel();
+        bcgltrs1 = new javax.swing.JLabel();
+        bcgpaCol1 = new javax.swing.JLabel();
+        bcgsellP1 = new javax.swing.JLabel();
+        bcgcostp1 = new javax.swing.JLabel();
+        bcgmasCod1 = new javax.swing.JLabel();
+        bcgproducer1 = new javax.swing.JLabel();
+        bcgDate7 = new javax.swing.JLabel();
+        bcgDate2 = new javax.swing.JLabel();
+        bcgDate6 = new javax.swing.JLabel();
+        bcgDate1 = new javax.swing.JLabel();
+        bcgproductAdd1 = new javax.swing.JLabel();
+        viewCustomer = new javax.swing.JPanel();
+        pViewp4 = new javax.swing.JPanel();
+        searchPanel1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jTextField10 = new javax.swing.JTextField();
+        jTextField9 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        bcgsearch4 = new javax.swing.JLabel();
+        bcgsearch3 = new javax.swing.JLabel();
+        bcgsearch2 = new javax.swing.JLabel();
+        bcgsearch1 = new javax.swing.JLabel();
+        searchBy1 = new javax.swing.JLabel();
+        pViewp5 = new javax.swing.JPanel();
+        dateAdded5 = new javax.swing.JTextField();
+        producerName5 = new javax.swing.JTextField();
+        masterCode5 = new javax.swing.JTextField();
+        costPrice5 = new javax.swing.JTextField();
+        sellingPrice5 = new javax.swing.JTextField();
+        paintColor5 = new javax.swing.JTextField();
+        litres5 = new javax.swing.JTextField();
+        paintCode5 = new javax.swing.JTextField();
+        paintType5 = new javax.swing.JTextField();
+        productType5 = new javax.swing.JTextField();
+        bcgproTy5 = new javax.swing.JLabel();
+        bcgpaTy5 = new javax.swing.JLabel();
+        bcgpaCo5 = new javax.swing.JLabel();
+        bcgltrs5 = new javax.swing.JLabel();
+        bcgpaCol5 = new javax.swing.JLabel();
+        bcgsellP5 = new javax.swing.JLabel();
+        bcgcostp5 = new javax.swing.JLabel();
+        bcgmasCod5 = new javax.swing.JLabel();
+        bcgproducer5 = new javax.swing.JLabel();
+        bcgDate5 = new javax.swing.JLabel();
+        editPrdtbtn3 = new javax.swing.JLabel();
+        bcgproductAdd5 = new javax.swing.JLabel();
+        deleteCustomer = new javax.swing.JPanel();
+        businessNameDelete = new javax.swing.JTextField();
+        bcgsearchBusiness = new javax.swing.JLabel();
+        deletebtnCustomer = new javax.swing.JLabel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        txtaddress1 = new javax.swing.JTextArea();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
         dateAdded2 = new javax.swing.JTextField();
         producerName2 = new javax.swing.JTextField();
         masterCode2 = new javax.swing.JTextField();
         costPrice2 = new javax.swing.JTextField();
         sellingPrice2 = new javax.swing.JTextField();
-        paintColor2 = new javax.swing.JTextField();
         litres2 = new javax.swing.JTextField();
         paintCode2 = new javax.swing.JTextField();
-        paintType2 = new javax.swing.JTextField();
-        productType2 = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
+        txtTitle1 = new javax.swing.JTextField();
+        txtBusinessName1 = new javax.swing.JTextField();
         bcgproTy2 = new javax.swing.JLabel();
         bcgpaTy2 = new javax.swing.JLabel();
         bcgpaCo2 = new javax.swing.JLabel();
@@ -130,29 +389,19 @@ public class test extends javax.swing.JFrame {
         bcgcostp2 = new javax.swing.JLabel();
         bcgmasCod2 = new javax.swing.JLabel();
         bcgproducer2 = new javax.swing.JLabel();
-        bcgDate2 = new javax.swing.JLabel();
-        editPrdtbtn = new javax.swing.JLabel();
-        bcgproductAdd2 = new javax.swing.JLabel();
-        sidebar = new javax.swing.JPanel();
-        menuProducts = new javax.swing.JLabel();
-        whiteBcgg = new javax.swing.JLabel();
-        btnViewprdt = new javax.swing.JLabel();
-        btnAddprdt = new javax.swing.JLabel();
-        btnback = new javax.swing.JLabel();
-        clr2 = new javax.swing.JLabel();
-        bcgWhite1 = new javax.swing.JLabel();
-        bcg3 = new javax.swing.JLabel();
-        viewProducts = new javax.swing.JPanel();
-        btnAddprdt1 = new javax.swing.JLabel();
-        btnViewprdt1 = new javax.swing.JLabel();
-        scrollVP = new javax.swing.JScrollPane();
-        pVP = new javax.swing.JPanel();
-        sidebar1 = new javax.swing.JPanel();
-        menuProducts1 = new javax.swing.JLabel();
-        clr3 = new javax.swing.JLabel();
-        whiteBcgg1 = new javax.swing.JLabel();
+        bcgDate8 = new javax.swing.JLabel();
+        bcgDate9 = new javax.swing.JLabel();
+        bcgDate10 = new javax.swing.JLabel();
+        jTextField6 = new javax.swing.JTextField();
+        bcgDate11 = new javax.swing.JLabel();
+        btnDeletecust = new javax.swing.JLabel();
+        btnViewcust = new javax.swing.JLabel();
+        btnAddcust = new javax.swing.JLabel();
+        BcgCustwhite = new javax.swing.JLabel();
+        custBack = new javax.swing.JLabel();
+        clr4 = new javax.swing.JLabel();
         bcgWhite2 = new javax.swing.JLabel();
-        bcg2 = new javax.swing.JLabel();
+        bcg4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -172,6 +421,11 @@ public class test extends javax.swing.JFrame {
 
         gobtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         gobtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/right.png"))); // NOI18N
+        gobtn.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                gobtnMouseClicked(evt);
+            }
+        });
         signinform.add(gobtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, -1, -1));
 
         pword.setFont(new java.awt.Font("Futura Hv BT", 0, 15)); // NOI18N
@@ -227,11 +481,20 @@ public class test extends javax.swing.JFrame {
 
         m_cuts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         m_cuts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/customers.png"))); // NOI18N
+        m_cuts.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                m_cutsMouseClicked(evt);
+            }
+        });
         p1.add(m_cuts, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 60, -1, -1));
 
         m_manAdm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         m_manAdm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/manageAdmins.png"))); // NOI18N
         p1.add(m_manAdm, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 60, -1, -1));
+
+        m_invoice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        m_invoice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/invoice.png"))); // NOI18N
+        p1.add(m_invoice, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/menu.png"))); // NOI18N
@@ -240,10 +503,6 @@ public class test extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/menu.png"))); // NOI18N
         p1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, -1, -1));
-
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/invoice.png"))); // NOI18N
-        p1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
 
         menu.add(p1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 1160, 620));
 
@@ -265,6 +524,38 @@ public class test extends javax.swing.JFrame {
         pAV.setOpaque(false);
         pAV.setLayout(new java.awt.CardLayout());
 
+        menuPrdts.setOpaque(false);
+        menuPrdts.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        paintProductPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        paintProductPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/products.png"))); // NOI18N
+        paintProductPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                paintProductPanelMouseClicked(evt);
+            }
+        });
+        menuPrdts.add(paintProductPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 110, -1, -1));
+
+        otherProductPanel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        otherProductPanel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Other Products.png"))); // NOI18N
+        otherProductPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                otherProductPanelMouseClicked(evt);
+            }
+        });
+        menuPrdts.add(otherProductPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 110, -1, -1));
+
+        paintDetails.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        paintDetails.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Paint Details.png"))); // NOI18N
+        paintDetails.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                paintDetailsMouseClicked(evt);
+            }
+        });
+        menuPrdts.add(paintDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 110, -1, -1));
+
+        pAV.add(menuPrdts, "card5");
+
         pAddp.setOpaque(false);
         pAddp.setPreferredSize(new java.awt.Dimension(1022, 492));
         pAddp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -284,20 +575,65 @@ public class test extends javax.swing.JFrame {
         sellingPrice.setBorder(null);
         pAddp.add(sellingPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(438, 190, 160, 38));
 
+        paintColor.setEditable(false);
         paintColor.setBorder(null);
-        pAddp.add(paintColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 180, 38));
+        pAddp.add(paintColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 190, 170, 38));
 
+        litres.setEditable(false);
         litres.setBorder(null);
-        pAddp.add(litres, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 75, 80, 38));
+        pAddp.add(litres, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 75, 82, 38));
 
+        paintCode.setEditable(false);
         paintCode.setBorder(null);
-        pAddp.add(paintCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 75, 130, 38));
+        pAddp.add(paintCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 75, 120, 38));
 
+        paintType.setEditable(false);
         paintType.setBorder(null);
-        pAddp.add(paintType, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 75, 130, 38));
+        pAddp.add(paintType, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 75, 120, 38));
 
+        productType.setEditable(false);
         productType.setBorder(null);
-        pAddp.add(productType, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 75, 130, 38));
+        pAddp.add(productType, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 75, 120, 38));
+
+        chevronDown4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronDown4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Down_12px.png"))); // NOI18N
+        pAddp.add(chevronDown4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 215, -1, -1));
+
+        chevronUp4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronUp4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Up_12px.png"))); // NOI18N
+        pAddp.add(chevronUp4, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 190, -1, -1));
+
+        chevronUp3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronUp3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Up_12px.png"))); // NOI18N
+        pAddp.add(chevronUp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 75, -1, -1));
+
+        chevronDown3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronDown3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Down_12px.png"))); // NOI18N
+        pAddp.add(chevronDown3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 100, -1, -1));
+
+        chevronUp2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronUp2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Up_12px.png"))); // NOI18N
+        pAddp.add(chevronUp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 75, -1, -1));
+
+        chevronDown2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronDown2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Down_12px.png"))); // NOI18N
+        pAddp.add(chevronDown2, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 100, -1, -1));
+
+        chevronUp1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronUp1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Up_12px.png"))); // NOI18N
+        pAddp.add(chevronUp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 75, -1, -1));
+
+        chevronDown1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronDown1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Down_12px.png"))); // NOI18N
+        pAddp.add(chevronDown1, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 100, -1, -1));
+
+        chevronDown.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronDown.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Down_12px.png"))); // NOI18N
+        pAddp.add(chevronDown, new org.netbeans.lib.awtextra.AbsoluteConstraints(268, 100, -1, -1));
+
+        chevronUp.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronUp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Up_12px.png"))); // NOI18N
+        pAddp.add(chevronUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(268, 75, -1, -1));
 
         bcgproTy.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         bcgproTy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/proTy.png"))); // NOI18N
@@ -347,122 +683,273 @@ public class test extends javax.swing.JFrame {
 
         pViewp.setOpaque(false);
         pViewp.setPreferredSize(new java.awt.Dimension(1022, 492));
-        pViewp.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        pViewp.setLayout(new java.awt.CardLayout());
 
-        dateAdded2.setEditable(false);
-        dateAdded2.setBorder(null);
-        pViewp.add(dateAdded2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 305, 225, 38));
+        pViewp2.setOpaque(false);
+        pViewp2.setPreferredSize(new java.awt.Dimension(1022, 492));
+        pViewp2.setLayout(new java.awt.CardLayout());
 
-        producerName2.setEditable(false);
-        producerName2.setBorder(null);
-        pViewp.add(producerName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 305, 210, 38));
+        searchPanel.setOpaque(false);
+        searchPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        masterCode2.setEditable(false);
-        masterCode2.setBorder(null);
-        pViewp.add(masterCode2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 305, 120, 38));
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable1.setOpaque(false);
+        jScrollPane1.setViewportView(jTable1);
 
-        costPrice2.setEditable(false);
-        costPrice2.setBorder(null);
-        pViewp.add(costPrice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(708, 190, 160, 38));
+        searchPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 860, 390));
 
-        sellingPrice2.setEditable(false);
-        sellingPrice2.setBorder(null);
-        pViewp.add(sellingPrice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(438, 190, 160, 38));
+        bcgPrice1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgPrice1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/searchByprice.png"))); // NOI18N
+        searchPanel.add(bcgPrice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 10, -1, -1));
 
-        paintColor2.setEditable(false);
-        paintColor2.setBorder(null);
-        pViewp.add(paintColor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 180, 38));
+        bcgPrice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgPrice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/searchByprice.png"))); // NOI18N
+        searchPanel.add(bcgPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 10, -1, -1));
 
-        litres2.setEditable(false);
-        litres2.setBorder(null);
-        pViewp.add(litres2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 75, 80, 38));
+        bcgtitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgtitle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/searchBytitle.png"))); // NOI18N
+        searchPanel.add(bcgtitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, -1));
 
-        paintCode2.setEditable(false);
-        paintCode2.setBorder(null);
-        pViewp.add(paintCode2, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 75, 130, 38));
+        bcgBusinessSearch.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgBusinessSearch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/searchBybusiness.png"))); // NOI18N
+        searchPanel.add(bcgBusinessSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, -1));
 
-        paintType2.setEditable(false);
-        paintType2.setBorder(null);
-        pViewp.add(paintType2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 75, 130, 38));
+        searchBy.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        searchBy.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/search.png"))); // NOI18N
+        searchPanel.add(searchBy, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 25, 120, -1));
 
-        productType2.setEditable(false);
-        productType2.setBorder(null);
-        pViewp.add(productType2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 75, 130, 38));
+        pViewp2.add(searchPanel, "card3");
 
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/updatedimg.png"))); // NOI18N
-        pViewp.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, -1, -1));
+        modalView.setOpaque(false);
+        modalView.setPreferredSize(new java.awt.Dimension(1022, 492));
+        modalView.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        bcgproTy2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgproTy2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/proTy.png"))); // NOI18N
-        pViewp.add(bcgproTy2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
+        dateAdded4.setEditable(false);
+        dateAdded4.setBorder(null);
+        modalView.add(dateAdded4, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 305, 225, 38));
 
-        bcgpaTy2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgpaTy2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paTy.png"))); // NOI18N
-        pViewp.add(bcgpaTy2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
+        producerName4.setEditable(false);
+        producerName4.setBorder(null);
+        modalView.add(producerName4, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 305, 210, 38));
 
-        bcgpaCo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgpaCo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paCo.png"))); // NOI18N
-        pViewp.add(bcgpaCo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, -1, -1));
+        masterCode4.setEditable(false);
+        masterCode4.setBorder(null);
+        modalView.add(masterCode4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 305, 120, 38));
 
-        bcgltrs2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgltrs2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/litres.png"))); // NOI18N
-        pViewp.add(bcgltrs2, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 30, -1, -1));
+        costPrice4.setEditable(false);
+        costPrice4.setBorder(null);
+        modalView.add(costPrice4, new org.netbeans.lib.awtextra.AbsoluteConstraints(708, 190, 160, 38));
 
-        bcgpaCol2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgpaCol2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paCol.png"))); // NOI18N
-        pViewp.add(bcgpaCol2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 145, -1, -1));
+        sellingPrice4.setEditable(false);
+        sellingPrice4.setBorder(null);
+        modalView.add(sellingPrice4, new org.netbeans.lib.awtextra.AbsoluteConstraints(438, 190, 160, 38));
 
-        bcgsellP2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgsellP2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/sellingPrice.png"))); // NOI18N
-        pViewp.add(bcgsellP2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 145, -1, -1));
+        paintColor4.setEditable(false);
+        paintColor4.setBorder(null);
+        modalView.add(paintColor4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 180, 38));
 
-        bcgcostp2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgcostp2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/costPrice.png"))); // NOI18N
-        pViewp.add(bcgcostp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 145, -1, -1));
+        litres4.setEditable(false);
+        litres4.setBorder(null);
+        modalView.add(litres4, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 75, 80, 38));
 
-        bcgmasCod2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgmasCod2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/masterCode.png"))); // NOI18N
-        pViewp.add(bcgmasCod2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+        paintCode4.setEditable(false);
+        paintCode4.setBorder(null);
+        modalView.add(paintCode4, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 75, 130, 38));
 
-        bcgproducer2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgproducer2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/producer.png"))); // NOI18N
-        pViewp.add(bcgproducer2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, -1, -1));
+        paintType4.setEditable(false);
+        paintType4.setBorder(null);
+        modalView.add(paintType4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 75, 130, 38));
 
-        bcgDate2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgDate2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/date.png"))); // NOI18N
-        pViewp.add(bcgDate2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, -1, -1));
+        productType4.setEditable(false);
+        productType4.setBorder(null);
+        modalView.add(productType4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 75, 130, 38));
 
-        editPrdtbtn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        editPrdtbtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/editProduct.png"))); // NOI18N
-        editPrdtbtn.addMouseListener(new java.awt.event.MouseAdapter() {
+        bcgproTy4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproTy4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/proTy.png"))); // NOI18N
+        modalView.add(bcgproTy4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
+
+        bcgpaTy4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaTy4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paTy.png"))); // NOI18N
+        modalView.add(bcgpaTy4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
+
+        bcgpaCo4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaCo4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paCo.png"))); // NOI18N
+        modalView.add(bcgpaCo4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, -1, -1));
+
+        bcgltrs4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgltrs4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/litres.png"))); // NOI18N
+        modalView.add(bcgltrs4, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 30, -1, -1));
+
+        bcgpaCol4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaCol4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paCol.png"))); // NOI18N
+        modalView.add(bcgpaCol4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 145, -1, -1));
+
+        bcgsellP4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgsellP4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/sellingPrice.png"))); // NOI18N
+        modalView.add(bcgsellP4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 145, -1, -1));
+
+        bcgcostp4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgcostp4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/costPrice.png"))); // NOI18N
+        modalView.add(bcgcostp4, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 145, -1, -1));
+
+        bcgmasCod4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgmasCod4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/masterCode.png"))); // NOI18N
+        modalView.add(bcgmasCod4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+
+        bcgproducer4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproducer4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/producer.png"))); // NOI18N
+        modalView.add(bcgproducer4, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, -1, -1));
+
+        bcgDate4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgDate4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/date.png"))); // NOI18N
+        modalView.add(bcgDate4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, -1, -1));
+
+        editPrdtbtn2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        editPrdtbtn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/editProduct.png"))); // NOI18N
+        editPrdtbtn2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                editPrdtbtnMouseClicked(evt);
+                editPrdtbtn2MouseClicked(evt);
             }
         });
-        pViewp.add(editPrdtbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, -1, -1));
+        modalView.add(editPrdtbtn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, -1, -1));
 
-        bcgproductAdd2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        bcgproductAdd2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/savept.png"))); // NOI18N
-        pViewp.add(bcgproductAdd2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 370, -1, -1));
+        bcgproductAdd4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproductAdd4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/saveProductopaque.png"))); // NOI18N
+        modalView.add(bcgproductAdd4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 370, -1, -1));
+
+        pViewp2.add(modalView, "card7");
+
+        pViewp.add(pViewp2, "card3");
 
         pAV.add(pViewp, "card3");
 
+        pDeletep.setOpaque(false);
+        pDeletep.setPreferredSize(new java.awt.Dimension(1022, 492));
+        pDeletep.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        masterSearch.setBorder(null);
+        masterSearch.setOpaque(false);
+        pDeletep.add(masterSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(353, 414, 215, 40));
+
+        dateAdded3.setEditable(false);
+        dateAdded3.setBorder(null);
+        pDeletep.add(dateAdded3, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 305, 225, 38));
+
+        producerName3.setEditable(false);
+        producerName3.setBorder(null);
+        pDeletep.add(producerName3, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 305, 210, 38));
+
+        masterCode3.setEditable(false);
+        masterCode3.setBorder(null);
+        pDeletep.add(masterCode3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 305, 120, 38));
+
+        costPrice3.setEditable(false);
+        costPrice3.setBorder(null);
+        pDeletep.add(costPrice3, new org.netbeans.lib.awtextra.AbsoluteConstraints(708, 190, 160, 38));
+
+        sellingPrice3.setEditable(false);
+        sellingPrice3.setBorder(null);
+        pDeletep.add(sellingPrice3, new org.netbeans.lib.awtextra.AbsoluteConstraints(438, 190, 160, 38));
+
+        paintColor3.setEditable(false);
+        paintColor3.setBorder(null);
+        pDeletep.add(paintColor3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 180, 38));
+
+        litres3.setEditable(false);
+        litres3.setBorder(null);
+        pDeletep.add(litres3, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 75, 80, 38));
+
+        paintCode3.setEditable(false);
+        paintCode3.setBorder(null);
+        pDeletep.add(paintCode3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 75, 130, 38));
+
+        paintType3.setEditable(false);
+        paintType3.setBorder(null);
+        pDeletep.add(paintType3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 75, 130, 38));
+
+        productType3.setEditable(false);
+        productType3.setBorder(null);
+        pDeletep.add(productType3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 75, 130, 38));
+
+        bcgproTy3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproTy3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/proTy.png"))); // NOI18N
+        pDeletep.add(bcgproTy3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
+
+        bcgpaTy3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaTy3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paTy.png"))); // NOI18N
+        pDeletep.add(bcgpaTy3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
+
+        bcgpaCo3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaCo3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paCo.png"))); // NOI18N
+        pDeletep.add(bcgpaCo3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, -1, -1));
+
+        bcgltrs3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgltrs3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/litres.png"))); // NOI18N
+        pDeletep.add(bcgltrs3, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 30, -1, -1));
+
+        bcgpaCol3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaCol3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paCol.png"))); // NOI18N
+        pDeletep.add(bcgpaCol3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 145, -1, -1));
+
+        bcgsellP3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgsellP3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/sellingPrice.png"))); // NOI18N
+        pDeletep.add(bcgsellP3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 145, -1, -1));
+
+        bcgcostp3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgcostp3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/costPrice.png"))); // NOI18N
+        pDeletep.add(bcgcostp3, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 145, -1, -1));
+
+        bcgmasCod3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgmasCod3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/masterCode.png"))); // NOI18N
+        pDeletep.add(bcgmasCod3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+
+        bcgproducer3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproducer3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/producer.png"))); // NOI18N
+        pDeletep.add(bcgproducer3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, -1, -1));
+
+        bcgDate3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgDate3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/date.png"))); // NOI18N
+        pDeletep.add(bcgDate3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, -1, -1));
+
+        editPrdtbtn1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        editPrdtbtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/masterSearch.png"))); // NOI18N
+        editPrdtbtn1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                editPrdtbtn1MouseClicked(evt);
+            }
+        });
+        pDeletep.add(editPrdtbtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, -1, -1));
+
+        bcgproductAdd3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproductAdd3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/delBtnOpaque.png"))); // NOI18N
+        pDeletep.add(bcgproductAdd3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 370, 330, 160));
+
+        pAV.add(pDeletep, "card3");
+
         products.add(pAV, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 1080, 530));
-
-        sidebar.setOpaque(false);
-        sidebar.setPreferredSize(new java.awt.Dimension(55, 565));
-        sidebar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        menuProducts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        menuProducts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/mP.png"))); // NOI18N
-        sidebar.add(menuProducts, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        products.add(sidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 69, -1, -1));
 
         whiteBcgg.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         whiteBcgg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle1.png"))); // NOI18N
         products.add(whiteBcgg, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 140, -1, -1));
+
+        btnDeleteprdt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnDeleteprdt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Productdel-opaque.png"))); // NOI18N
+        btnDeleteprdt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnDeleteprdtMouseClicked(evt);
+            }
+        });
+        products.add(btnDeleteprdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 70, -1, -1));
 
         btnViewprdt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnViewprdt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/SubMenu2.png"))); // NOI18N
@@ -484,6 +971,11 @@ public class test extends javax.swing.JFrame {
 
         btnback.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Back.png"))); // NOI18N
+        btnback.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnbackMouseClicked(evt);
+            }
+        });
         products.add(btnback, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 60, -1, -1));
 
         clr2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -499,72 +991,839 @@ public class test extends javax.swing.JFrame {
 
         mainPanel.add(products, "card4");
 
-        viewProducts.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        paintDetail.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnAddprdt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnAddprdt1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/addPrdt.png"))); // NOI18N
-        btnAddprdt1.addMouseListener(new java.awt.event.MouseAdapter() {
+        pdPaintColor.setBorder(null);
+        pdPaintColor.setOpaque(false);
+        paintDetail.add(pdPaintColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(959, 333, 140, 38));
+
+        pdPaintCode.setBorder(null);
+        pdPaintCode.setOpaque(false);
+        paintDetail.add(pdPaintCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 333, 130, 38));
+
+        pdPaintType.setBorder(null);
+        pdPaintType.setOpaque(false);
+        paintDetail.add(pdPaintType, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 333, 130, 38));
+
+        pdProductType.setBorder(null);
+        pdProductType.setOpaque(false);
+        paintDetail.add(pdProductType, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 333, 130, 38));
+
+        submit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        submit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/submit.png"))); // NOI18N
+        paintDetail.add(submit, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 450, -1, -1));
+
+        bcgpdPaintColor.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpdPaintColor.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Paint Color.png"))); // NOI18N
+        paintDetail.add(bcgpdPaintColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 290, -1, -1));
+
+        bcgpdPaintCode.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpdPaintCode.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Paint Code.png"))); // NOI18N
+        paintDetail.add(bcgpdPaintCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 290, -1, -1));
+
+        bcgpdPaintType.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpdPaintType.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Paint type.png"))); // NOI18N
+        paintDetail.add(bcgpdPaintType, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 290, -1, -1));
+
+        bcgpdProductType.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpdProductType.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Product type.png"))); // NOI18N
+        paintDetail.add(bcgpdProductType, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 290, -1, -1));
+
+        logo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/logo1.png"))); // NOI18N
+        paintDetail.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 70, -1, -1));
+
+        BcgpaintDetailwhite.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BcgpaintDetailwhite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle1.png"))); // NOI18N
+        paintDetail.add(BcgpaintDetailwhite, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 140, -1, -1));
+
+        paintDetback.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        paintDetback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Back.png"))); // NOI18N
+        paintDetback.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAddprdt1MouseClicked(evt);
+                paintDetbackMouseClicked(evt);
             }
         });
-        viewProducts.add(btnAddprdt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, -1, -1));
+        paintDetail.add(paintDetback, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 60, -1, -1));
 
-        btnViewprdt1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnViewprdt1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/viewprdt.png"))); // NOI18N
-        btnViewprdt1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnViewprdt1MouseClicked(evt);
+        clr5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clr5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
+        paintDetail.add(clr5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 710, -1, -1));
+
+        bcgWhite4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgWhite4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle.png"))); // NOI18N
+        paintDetail.add(bcgWhite4, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, -1, -1));
+
+        bcg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
+        paintDetail.add(bcg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        mainPanel.add(paintDetail, "card7");
+
+        otherproducts.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        otherProductsPane.setOpaque(false);
+        otherProductsPane.setLayout(new java.awt.CardLayout());
+
+        addOtherproduct.setOpaque(false);
+        addOtherproduct.setPreferredSize(new java.awt.Dimension(1022, 492));
+        addOtherproduct.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        otherProductrate1.setBorder(null);
+        addOtherproduct.add(otherProductrate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(558, 185, 120, 38));
+
+        otherProductname1.setBorder(null);
+        addOtherproduct.add(otherProductname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 185, 120, 38));
+
+        in1.setBorder(null);
+        addOtherproduct.add(in1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 75, 100, 38));
+
+        masterCode7.setBorder(null);
+        addOtherproduct.add(masterCode7, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 185, 120, 38));
+
+        otherProductCostPrice1.setBorder(null);
+        addOtherproduct.add(otherProductCostPrice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 185, 160, 38));
+
+        otherProducttype1.setBorder(null);
+        addOtherproduct.add(otherProducttype1, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 75, 120, 38));
+
+        chevronUp6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronUp6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Up_12px.png"))); // NOI18N
+        addOtherproduct.add(chevronUp6, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 80, -1, -1));
+
+        chevronDown6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronDown6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Down_12px.png"))); // NOI18N
+        addOtherproduct.add(chevronDown6, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 100, -1, -1));
+
+        chevronUp5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronUp5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Up_12px.png"))); // NOI18N
+        addOtherproduct.add(chevronUp5, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 80, -1, -1));
+
+        chevronDown5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronDown5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Down_12px.png"))); // NOI18N
+        addOtherproduct.add(chevronDown5, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 100, -1, -1));
+
+        bcgrate1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgrate1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rate.png"))); // NOI18N
+        addOtherproduct.add(bcgrate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 140, -1, -1));
+
+        bcgname1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgname1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Name.png"))); // NOI18N
+        addOtherproduct.add(bcgname1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
+
+        bgIn1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bgIn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/In.png"))); // NOI18N
+        addOtherproduct.add(bgIn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
+
+        bgotherproductType1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bgotherproductType1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/proTy.png"))); // NOI18N
+        addOtherproduct.add(bgotherproductType1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
+
+        bcgcostp7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgcostp7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/costPrice.png"))); // NOI18N
+        addOtherproduct.add(bcgcostp7, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, -1, -1));
+
+        bcgmasCod7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgmasCod7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/masterCode.png"))); // NOI18N
+        addOtherproduct.add(bcgmasCod7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, -1));
+
+        bcgproductAdd7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproductAdd7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/btnProduct.png"))); // NOI18N
+        addOtherproduct.add(bcgproductAdd7, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, -1, -1));
+
+        otherProductsPane.add(addOtherproduct, "card2");
+
+        viewOtherproduct.setOpaque(false);
+        viewOtherproduct.setPreferredSize(new java.awt.Dimension(1022, 492));
+        viewOtherproduct.setLayout(new java.awt.CardLayout());
+
+        viewsearchPanel.setOpaque(false);
+        viewsearchPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
             }
-        });
-        viewProducts.add(btnViewprdt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(435, 70, -1, -1));
+        ));
+        jTable3.setOpaque(false);
+        jScrollPane3.setViewportView(jTable3);
 
-        scrollVP.setHorizontalScrollBar(null);
-        scrollVP.setOpaque(false);
+        viewsearchPanel.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 860, 390));
 
-        pVP.setOpaque(false);
+        bcgPrice2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgPrice2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/searchByprice.png"))); // NOI18N
+        viewsearchPanel.add(bcgPrice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, -1, -1));
 
-        javax.swing.GroupLayout pVPLayout = new javax.swing.GroupLayout(pVP);
-        pVP.setLayout(pVPLayout);
-        pVPLayout.setHorizontalGroup(
-            pVPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1017, Short.MAX_VALUE)
-        );
-        pVPLayout.setVerticalGroup(
-            pVPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 487, Short.MAX_VALUE)
-        );
+        bcgtitle2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgtitle2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/searchBytitle.png"))); // NOI18N
+        viewsearchPanel.add(bcgtitle2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, -1, -1));
 
-        scrollVP.setViewportView(pVP);
+        bcgBusinessSearch2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgBusinessSearch2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/searchBybusiness.png"))); // NOI18N
+        viewsearchPanel.add(bcgBusinessSearch2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 10, -1, -1));
 
-        viewProducts.add(scrollVP, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 143, 1020, 490));
+        searchBy2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        searchBy2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/search.png"))); // NOI18N
+        viewsearchPanel.add(searchBy2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 25, -1, -1));
 
-        sidebar1.setOpaque(false);
-        sidebar1.setPreferredSize(new java.awt.Dimension(55, 565));
-        sidebar1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        viewOtherproduct.add(viewsearchPanel, "card3");
 
-        menuProducts1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        menuProducts1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/mP.png"))); // NOI18N
-        sidebar1.add(menuProducts1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        viewOtherproductEdit.setOpaque(false);
+        viewOtherproductEdit.setPreferredSize(new java.awt.Dimension(1022, 492));
+        viewOtherproductEdit.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        viewProducts.add(sidebar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 69, -1, -1));
+        otherProductrate3.setBorder(null);
+        viewOtherproductEdit.add(otherProductrate3, new org.netbeans.lib.awtextra.AbsoluteConstraints(558, 185, 120, 38));
 
-        clr3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        clr3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
-        viewProducts.add(clr3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 710, -1, -1));
+        otherProductname3.setBorder(null);
+        viewOtherproductEdit.add(otherProductname3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 185, 120, 38));
+
+        in3.setBorder(null);
+        viewOtherproductEdit.add(in3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 75, 100, 38));
+
+        masterCode9.setBorder(null);
+        viewOtherproductEdit.add(masterCode9, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 185, 120, 38));
+
+        otherProductCostPrice3.setBorder(null);
+        viewOtherproductEdit.add(otherProductCostPrice3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 185, 160, 38));
+
+        otherProducttype3.setBorder(null);
+        viewOtherproductEdit.add(otherProducttype3, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 75, 120, 38));
+
+        chevronUp9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronUp9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Up_12px.png"))); // NOI18N
+        viewOtherproductEdit.add(chevronUp9, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 80, -1, -1));
+
+        chevronDown9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronDown9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Down_12px.png"))); // NOI18N
+        viewOtherproductEdit.add(chevronDown9, new org.netbeans.lib.awtextra.AbsoluteConstraints(458, 100, -1, -1));
+
+        chevronUp10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronUp10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Up_12px.png"))); // NOI18N
+        viewOtherproductEdit.add(chevronUp10, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 80, -1, -1));
+
+        chevronDown10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        chevronDown10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Chevron Down_12px.png"))); // NOI18N
+        viewOtherproductEdit.add(chevronDown10, new org.netbeans.lib.awtextra.AbsoluteConstraints(274, 100, -1, -1));
+
+        bcgrate3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgrate3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rate.png"))); // NOI18N
+        viewOtherproductEdit.add(bcgrate3, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 140, -1, -1));
+
+        bcgname3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgname3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Name.png"))); // NOI18N
+        viewOtherproductEdit.add(bcgname3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
+
+        bgIn3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bgIn3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/In.png"))); // NOI18N
+        viewOtherproductEdit.add(bgIn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
+
+        bgotherproductType3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bgotherproductType3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/proTy.png"))); // NOI18N
+        viewOtherproductEdit.add(bgotherproductType3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
+
+        bcgcostp9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgcostp9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/costPrice.png"))); // NOI18N
+        viewOtherproductEdit.add(bcgcostp9, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, -1, -1));
+
+        bcgmasCod9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgmasCod9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/masterCode.png"))); // NOI18N
+        viewOtherproductEdit.add(bcgmasCod9, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, -1));
+
+        saveOtherproduct.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        saveOtherproduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/saveProductopaque.png"))); // NOI18N
+        viewOtherproductEdit.add(saveOtherproduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 280, -1, -1));
+
+        editOtherproduct.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        editOtherproduct.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/editProduct.png"))); // NOI18N
+        viewOtherproductEdit.add(editOtherproduct, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 280, -1, -1));
+
+        viewOtherproduct.add(viewOtherproductEdit, "card2");
+
+        otherProductsPane.add(viewOtherproduct, "card2");
+
+        deleteOtherproduct.setOpaque(false);
+        deleteOtherproduct.setPreferredSize(new java.awt.Dimension(1022, 492));
+        deleteOtherproduct.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        otherProductrate2.setEditable(false);
+        otherProductrate2.setBorder(null);
+        deleteOtherproduct.add(otherProductrate2, new org.netbeans.lib.awtextra.AbsoluteConstraints(558, 185, 120, 38));
+
+        otherProductname2.setEditable(false);
+        otherProductname2.setBorder(null);
+        deleteOtherproduct.add(otherProductname2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 185, 120, 38));
+
+        in2.setEditable(false);
+        in2.setBorder(null);
+        deleteOtherproduct.add(in2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 75, 100, 38));
+
+        masterCode8.setEditable(false);
+        masterCode8.setBorder(null);
+        deleteOtherproduct.add(masterCode8, new org.netbeans.lib.awtextra.AbsoluteConstraints(356, 185, 120, 38));
+
+        otherProductCostPrice2.setEditable(false);
+        otherProductCostPrice2.setBorder(null);
+        deleteOtherproduct.add(otherProductCostPrice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 185, 160, 38));
+
+        otherProducttype2.setEditable(false);
+        otherProducttype2.setBorder(null);
+        deleteOtherproduct.add(otherProducttype2, new org.netbeans.lib.awtextra.AbsoluteConstraints(148, 75, 120, 38));
+
+        bcgrate2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgrate2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rate.png"))); // NOI18N
+        deleteOtherproduct.add(bcgrate2, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 140, -1, -1));
+
+        bcgname2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgname2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Name.png"))); // NOI18N
+        deleteOtherproduct.add(bcgname2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, -1, -1));
+
+        bgIn2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bgIn2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/In.png"))); // NOI18N
+        deleteOtherproduct.add(bgIn2, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
+
+        bgotherproductType2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bgotherproductType2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/proTy.png"))); // NOI18N
+        deleteOtherproduct.add(bgotherproductType2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
+
+        bcgcostp8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgcostp8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/costPrice.png"))); // NOI18N
+        deleteOtherproduct.add(bcgcostp8, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 140, -1, -1));
+
+        bcgmasCod8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgmasCod8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/masterCode.png"))); // NOI18N
+        deleteOtherproduct.add(bcgmasCod8, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 140, -1, -1));
+
+        bcgproductAdd8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproductAdd8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/delBtnOpaque.png"))); // NOI18N
+        deleteOtherproduct.add(bcgproductAdd8, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 280, -1, -1));
+
+        otherProductsPane.add(deleteOtherproduct, "card2");
+
+        otherproducts.add(otherProductsPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 1080, 530));
 
         whiteBcgg1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         whiteBcgg1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle1.png"))); // NOI18N
-        viewProducts.add(whiteBcgg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 140, -1, -1));
+        otherproducts.add(whiteBcgg1, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 140, -1, -1));
+
+        OtherprdtbtnDelete.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        OtherprdtbtnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Productdel-opaque.png"))); // NOI18N
+        OtherprdtbtnDelete.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OtherprdtbtnDeleteMouseClicked(evt);
+            }
+        });
+        otherproducts.add(OtherprdtbtnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 70, -1, -1));
+
+        OtherprdtbtnView.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        OtherprdtbtnView.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/SubMenu2.png"))); // NOI18N
+        OtherprdtbtnView.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OtherprdtbtnViewMouseClicked(evt);
+            }
+        });
+        otherproducts.add(OtherprdtbtnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(435, 70, -1, -1));
+
+        OtherprdtbtnAdd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        OtherprdtbtnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/SubMenu1.png"))); // NOI18N
+        OtherprdtbtnAdd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                OtherprdtbtnAddMouseClicked(evt);
+            }
+        });
+        otherproducts.add(OtherprdtbtnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, -1, -1));
+
+        btnbackHome.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnbackHome.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Back.png"))); // NOI18N
+        btnbackHome.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnbackHomeMouseClicked(evt);
+            }
+        });
+        otherproducts.add(btnbackHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 60, -1, -1));
+
+        clr3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clr3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
+        otherproducts.add(clr3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 710, -1, -1));
+
+        bcgWhite3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgWhite3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle.png"))); // NOI18N
+        otherproducts.add(bcgWhite3, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, -1, -1));
+
+        bcg5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
+        otherproducts.add(bcg5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        mainPanel.add(otherproducts, "card4");
+
+        customers.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cAV.setOpaque(false);
+        cAV.setLayout(new java.awt.CardLayout());
+
+        addCustomer.setOpaque(false);
+        addCustomer.setPreferredSize(new java.awt.Dimension(1022, 492));
+        addCustomer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane4.setBorder(null);
+        jScrollPane4.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+
+        txtaddress.setColumns(20);
+        txtaddress.setRows(5);
+        jScrollPane4.setViewportView(txtaddress);
+
+        addCustomer.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 190, 390, 65));
+
+        jTextField5.setBorder(null);
+        addCustomer.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 425, 150, 38));
+
+        jTextField2.setBorder(null);
+        addCustomer.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(875, 325, 130, 38));
+
+        jTextField1.setBorder(null);
+        addCustomer.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(624, 325, 180, 38));
+
+        dateAdded1.setBorder(null);
+        addCustomer.add(dateAdded1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 325, 170, 38));
+
+        producerName1.setBorder(null);
+        addCustomer.add(producerName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 325, 230, 38));
+
+        masterCode1.setBorder(null);
+        addCustomer.add(masterCode1, new org.netbeans.lib.awtextra.AbsoluteConstraints(888, 60, 130, 38));
+
+        costPrice1.setBorder(null);
+        addCustomer.add(costPrice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(835, 205, 205, 38));
+
+        sellingPrice1.setBorder(null);
+        addCustomer.add(sellingPrice1, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 205, 180, 38));
+
+        litres1.setBorder(null);
+        addCustomer.add(litres1, new org.netbeans.lib.awtextra.AbsoluteConstraints(638, 60, 185, 38));
+
+        paintCode1.setBorder(null);
+        addCustomer.add(paintCode1, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 60, 130, 38));
+
+        txtTitle.setBorder(null);
+        addCustomer.add(txtTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, 130, 38));
+
+        txtBusinessName.setBorder(null);
+        addCustomer.add(txtBusinessName, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 60, 130, 38));
+
+        bcgproTy1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproTy1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/BusinessName.png"))); // NOI18N
+        addCustomer.add(bcgproTy1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, -1, -1));
+
+        bcgpaTy1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaTy1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Title.png"))); // NOI18N
+        addCustomer.add(bcgpaTy1, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 15, -1, -1));
+
+        bcgpaCo1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaCo1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Surname.png"))); // NOI18N
+        addCustomer.add(bcgpaCo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 15, -1, -1));
+
+        bcgltrs1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgltrs1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Othernames.png"))); // NOI18N
+        addCustomer.add(bcgltrs1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 15, -1, -1));
+
+        bcgpaCol1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaCol1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/address.png"))); // NOI18N
+        addCustomer.add(bcgpaCol1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
+
+        bcgsellP1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgsellP1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/phoneNumber.png"))); // NOI18N
+        addCustomer.add(bcgsellP1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, -1, -1));
+
+        bcgcostp1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgcostp1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/email.png"))); // NOI18N
+        addCustomer.add(bcgcostp1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 160, -1, -1));
+
+        bcgmasCod1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgmasCod1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Firstname.png"))); // NOI18N
+        addCustomer.add(bcgmasCod1, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 15, -1, -1));
+
+        bcgproducer1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproducer1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/price-category.png"))); // NOI18N
+        addCustomer.add(bcgproducer1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+
+        bcgDate7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgDate7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/LedgerName.png"))); // NOI18N
+        addCustomer.add(bcgDate7, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 280, -1, -1));
+
+        bcgDate2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgDate2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/opening Balance.png"))); // NOI18N
+        addCustomer.add(bcgDate2, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 280, -1, -1));
+
+        bcgDate6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgDate6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/regulate.png"))); // NOI18N
+        addCustomer.add(bcgDate6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+
+        bcgDate1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgDate1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/creditLimit.png"))); // NOI18N
+        addCustomer.add(bcgDate1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, -1, -1));
+
+        bcgproductAdd1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproductAdd1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/customer.png"))); // NOI18N
+        addCustomer.add(bcgproductAdd1, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 400, -1, -1));
+
+        cAV.add(addCustomer, "card2");
+
+        viewCustomer.setOpaque(false);
+        viewCustomer.setLayout(new java.awt.CardLayout());
+
+        pViewp4.setOpaque(false);
+        pViewp4.setPreferredSize(new java.awt.Dimension(1022, 492));
+        pViewp4.setLayout(new java.awt.CardLayout());
+
+        searchPanel1.setOpaque(false);
+        searchPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jTable2.setOpaque(false);
+        jScrollPane2.setViewportView(jTable2);
+
+        searchPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 860, 390));
+
+        jTextField10.setBorder(null);
+        jTextField10.setOpaque(false);
+        searchPanel1.add(jTextField10, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 40, 145, 38));
+
+        jTextField9.setBorder(null);
+        jTextField9.setOpaque(false);
+        searchPanel1.add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 40, 145, 38));
+
+        jTextField8.setBorder(null);
+        jTextField8.setOpaque(false);
+        searchPanel1.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 40, 145, 38));
+
+        jTextField7.setBorder(null);
+        jTextField7.setOpaque(false);
+        searchPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 40, 145, 38));
+
+        bcgsearch4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgsearch4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/searchByprice.png"))); // NOI18N
+        searchPanel1.add(bcgsearch4, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 10, -1, -1));
+
+        bcgsearch3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgsearch3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/searchByprice.png"))); // NOI18N
+        searchPanel1.add(bcgsearch3, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 10, -1, -1));
+
+        bcgsearch2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgsearch2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/searchBytitle.png"))); // NOI18N
+        searchPanel1.add(bcgsearch2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, -1, -1));
+
+        bcgsearch1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgsearch1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/searchBybusiness.png"))); // NOI18N
+        searchPanel1.add(bcgsearch1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, -1, -1));
+
+        searchBy1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        searchBy1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/search.png"))); // NOI18N
+        searchPanel1.add(searchBy1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 25, 120, -1));
+
+        pViewp4.add(searchPanel1, "card3");
+
+        pViewp5.setOpaque(false);
+        pViewp5.setPreferredSize(new java.awt.Dimension(1022, 492));
+        pViewp5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        dateAdded5.setEditable(false);
+        dateAdded5.setBorder(null);
+        pViewp5.add(dateAdded5, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 305, 225, 38));
+
+        producerName5.setEditable(false);
+        producerName5.setBorder(null);
+        pViewp5.add(producerName5, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 305, 210, 38));
+
+        masterCode5.setEditable(false);
+        masterCode5.setBorder(null);
+        pViewp5.add(masterCode5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 305, 120, 38));
+
+        costPrice5.setEditable(false);
+        costPrice5.setBorder(null);
+        pViewp5.add(costPrice5, new org.netbeans.lib.awtextra.AbsoluteConstraints(708, 190, 160, 38));
+
+        sellingPrice5.setEditable(false);
+        sellingPrice5.setBorder(null);
+        pViewp5.add(sellingPrice5, new org.netbeans.lib.awtextra.AbsoluteConstraints(438, 190, 160, 38));
+
+        paintColor5.setEditable(false);
+        paintColor5.setBorder(null);
+        pViewp5.add(paintColor5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 180, 38));
+
+        litres5.setEditable(false);
+        litres5.setBorder(null);
+        pViewp5.add(litres5, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 75, 80, 38));
+
+        paintCode5.setEditable(false);
+        paintCode5.setBorder(null);
+        pViewp5.add(paintCode5, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 75, 130, 38));
+
+        paintType5.setEditable(false);
+        paintType5.setBorder(null);
+        pViewp5.add(paintType5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 75, 130, 38));
+
+        productType5.setEditable(false);
+        productType5.setBorder(null);
+        pViewp5.add(productType5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 75, 130, 38));
+
+        bcgproTy5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproTy5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/proTy.png"))); // NOI18N
+        pViewp5.add(bcgproTy5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, -1, -1));
+
+        bcgpaTy5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaTy5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paTy.png"))); // NOI18N
+        pViewp5.add(bcgpaTy5, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
+
+        bcgpaCo5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaCo5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paCo.png"))); // NOI18N
+        pViewp5.add(bcgpaCo5, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 30, -1, -1));
+
+        bcgltrs5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgltrs5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/litres.png"))); // NOI18N
+        pViewp5.add(bcgltrs5, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 30, -1, -1));
+
+        bcgpaCol5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaCol5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/paCol.png"))); // NOI18N
+        pViewp5.add(bcgpaCol5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 145, -1, -1));
+
+        bcgsellP5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgsellP5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/sellingPrice.png"))); // NOI18N
+        pViewp5.add(bcgsellP5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 145, -1, -1));
+
+        bcgcostp5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgcostp5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/costPrice.png"))); // NOI18N
+        pViewp5.add(bcgcostp5, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 145, -1, -1));
+
+        bcgmasCod5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgmasCod5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/masterCode.png"))); // NOI18N
+        pViewp5.add(bcgmasCod5, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, -1, -1));
+
+        bcgproducer5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproducer5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/producer.png"))); // NOI18N
+        pViewp5.add(bcgproducer5, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 260, -1, -1));
+
+        bcgDate5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgDate5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/date.png"))); // NOI18N
+        pViewp5.add(bcgDate5, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 260, -1, -1));
+
+        editPrdtbtn3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        editPrdtbtn3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/editCustomer.png"))); // NOI18N
+        editPrdtbtn3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                editPrdtbtn3MouseClicked(evt);
+            }
+        });
+        pViewp5.add(editPrdtbtn3, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 370, -1, -1));
+
+        bcgproductAdd5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproductAdd5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/savept.png"))); // NOI18N
+        pViewp5.add(bcgproductAdd5, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 370, -1, -1));
+
+        pViewp4.add(pViewp5, "card3");
+
+        viewCustomer.add(pViewp4, "card3");
+
+        cAV.add(viewCustomer, "card3");
+
+        deleteCustomer.setOpaque(false);
+        deleteCustomer.setPreferredSize(new java.awt.Dimension(1022, 492));
+        deleteCustomer.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        businessNameDelete.setBorder(null);
+        businessNameDelete.setOpaque(false);
+        deleteCustomer.add(businessNameDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(375, 425, 210, 38));
+
+        bcgsearchBusiness.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgsearchBusiness.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/business delete.png"))); // NOI18N
+        bcgsearchBusiness.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                bcgsearchBusinessMouseClicked(evt);
+            }
+        });
+        deleteCustomer.add(bcgsearchBusiness, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 380, -1, -1));
+
+        deletebtnCustomer.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        deletebtnCustomer.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/customer-Deleteopacity.png"))); // NOI18N
+        deleteCustomer.add(deletebtnCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 380, 330, 160));
+
+        txtaddress1.setEditable(false);
+        txtaddress1.setColumns(20);
+        txtaddress1.setRows(5);
+        txtaddress1.setBorder(null);
+        jScrollPane5.setViewportView(txtaddress1);
+
+        deleteCustomer.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 190, 390, 65));
+
+        jTextField3.setEditable(false);
+        jTextField3.setBorder(null);
+        deleteCustomer.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(875, 325, 130, 38));
+
+        jTextField4.setEditable(false);
+        jTextField4.setBorder(null);
+        deleteCustomer.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(624, 325, 180, 38));
+
+        dateAdded2.setEditable(false);
+        dateAdded2.setBorder(null);
+        deleteCustomer.add(dateAdded2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 325, 170, 38));
+
+        producerName2.setEditable(false);
+        producerName2.setBorder(null);
+        deleteCustomer.add(producerName2, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 325, 230, 38));
+
+        masterCode2.setEditable(false);
+        masterCode2.setBorder(null);
+        deleteCustomer.add(masterCode2, new org.netbeans.lib.awtextra.AbsoluteConstraints(888, 60, 130, 38));
+
+        costPrice2.setEditable(false);
+        costPrice2.setBorder(null);
+        deleteCustomer.add(costPrice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(835, 205, 205, 38));
+
+        sellingPrice2.setEditable(false);
+        sellingPrice2.setBorder(null);
+        deleteCustomer.add(sellingPrice2, new org.netbeans.lib.awtextra.AbsoluteConstraints(548, 205, 180, 38));
+
+        litres2.setEditable(false);
+        litres2.setBorder(null);
+        deleteCustomer.add(litres2, new org.netbeans.lib.awtextra.AbsoluteConstraints(638, 60, 185, 38));
+
+        paintCode2.setEditable(false);
+        paintCode2.setBorder(null);
+        deleteCustomer.add(paintCode2, new org.netbeans.lib.awtextra.AbsoluteConstraints(445, 60, 130, 38));
+
+        txtTitle1.setEditable(false);
+        txtTitle1.setBorder(null);
+        deleteCustomer.add(txtTitle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, 130, 38));
+
+        txtBusinessName1.setEditable(false);
+        txtBusinessName1.setBorder(null);
+        deleteCustomer.add(txtBusinessName1, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 60, 130, 38));
+
+        bcgproTy2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproTy2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/BusinessName.png"))); // NOI18N
+        deleteCustomer.add(bcgproTy2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 15, -1, -1));
+
+        bcgpaTy2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaTy2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Title.png"))); // NOI18N
+        deleteCustomer.add(bcgpaTy2, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 15, -1, -1));
+
+        bcgpaCo2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaCo2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Surname.png"))); // NOI18N
+        deleteCustomer.add(bcgpaCo2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 15, -1, -1));
+
+        bcgltrs2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgltrs2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Othernames.png"))); // NOI18N
+        deleteCustomer.add(bcgltrs2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 15, -1, -1));
+
+        bcgpaCol2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgpaCol2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/address.png"))); // NOI18N
+        deleteCustomer.add(bcgpaCol2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
+
+        bcgsellP2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgsellP2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/phoneNumber.png"))); // NOI18N
+        deleteCustomer.add(bcgsellP2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 160, -1, -1));
+
+        bcgcostp2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgcostp2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/email.png"))); // NOI18N
+        deleteCustomer.add(bcgcostp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 160, -1, -1));
+
+        bcgmasCod2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgmasCod2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Firstname.png"))); // NOI18N
+        deleteCustomer.add(bcgmasCod2, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 15, -1, -1));
+
+        bcgproducer2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgproducer2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/price-category.png"))); // NOI18N
+        deleteCustomer.add(bcgproducer2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, -1, -1));
+
+        bcgDate8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgDate8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/LedgerName.png"))); // NOI18N
+        deleteCustomer.add(bcgDate8, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 280, -1, -1));
+
+        bcgDate9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgDate9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/opening Balance.png"))); // NOI18N
+        deleteCustomer.add(bcgDate9, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 280, -1, -1));
+
+        bcgDate10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgDate10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/creditLimit.png"))); // NOI18N
+        deleteCustomer.add(bcgDate10, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 280, -1, -1));
+
+        jTextField6.setEditable(false);
+        jTextField6.setBorder(null);
+        deleteCustomer.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 425, 150, 38));
+
+        bcgDate11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgDate11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/regulate.png"))); // NOI18N
+        deleteCustomer.add(bcgDate11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 380, -1, -1));
+
+        cAV.add(deleteCustomer, "card3");
+
+        customers.add(cAV, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 1080, 530));
+
+        btnDeletecust.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnDeletecust.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Customersdel-opaque.png"))); // NOI18N
+        btnDeletecust.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnDeletecustMouseClicked(evt);
+            }
+        });
+        customers.add(btnDeletecust, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 70, -1, -1));
+
+        btnViewcust.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnViewcust.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Customersview-opaque.png"))); // NOI18N
+        btnViewcust.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnViewcustMouseClicked(evt);
+            }
+        });
+        customers.add(btnViewcust, new org.netbeans.lib.awtextra.AbsoluteConstraints(435, 70, -1, -1));
+
+        btnAddcust.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnAddcust.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Customersadd-opaque.png"))); // NOI18N
+        btnAddcust.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddcustMouseClicked(evt);
+            }
+        });
+        customers.add(btnAddcust, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, -1, -1));
+
+        BcgCustwhite.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BcgCustwhite.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle1.png"))); // NOI18N
+        customers.add(BcgCustwhite, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 140, -1, -1));
+
+        custBack.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        custBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Back.png"))); // NOI18N
+        custBack.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                custBackMouseClicked(evt);
+            }
+        });
+        customers.add(custBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 60, -1, -1));
+
+        clr4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clr4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
+        customers.add(clr4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 710, -1, -1));
 
         bcgWhite2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         bcgWhite2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle.png"))); // NOI18N
-        viewProducts.add(bcgWhite2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, -1, -1));
+        customers.add(bcgWhite2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, -1, -1));
 
-        bcg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
-        viewProducts.add(bcg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        bcg4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
+        customers.add(bcg4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        mainPanel.add(viewProducts, "card5");
+        mainPanel.add(customers, "card5");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -581,7 +1840,7 @@ public class test extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewprdtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewprdtMouseClicked
-
+        btnDeleteprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/Productdel-opaque.png")));
         btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewprdt.png")));
         btnAddprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/addPrdt.png")));
         
@@ -596,6 +1855,7 @@ public class test extends javax.swing.JFrame {
     private void btnAddprdtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddprdtMouseClicked
         btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/SubMenu2.png")));
         btnAddprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/SubMenu1.png")));
+        btnDeleteprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/Productdel-opaque.png")));
         
         pAV.removeAll();
         pAV.validate();
@@ -606,31 +1866,218 @@ public class test extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAddprdtMouseClicked
 
     private void m_prdtsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_m_prdtsMouseClicked
+        btnAddprdt.setVisible(false);
+        btnViewprdt.setVisible(false);
+        btnDeleteprdt.setVisible(false);
+//        sidebar.setVisible(false);
+        
         mainPanel.removeAll();
         mainPanel.validate();
         mainPanel.repaint();
+        mainPanel.add(products);
+        mainPanel.revalidate();
+        mainPanel.repaint();
     }//GEN-LAST:event_m_prdtsMouseClicked
 
-    private void btnAddprdt1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddprdt1MouseClicked
+    private void editPrdtbtn1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editPrdtbtn1MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAddprdt1MouseClicked
+    }//GEN-LAST:event_editPrdtbtn1MouseClicked
 
-    private void btnViewprdt1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewprdt1MouseClicked
+    private void btnDeleteprdtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteprdtMouseClicked
+        btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/SubMenu2.png")));
+        btnAddprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/addPrdt.png")));
+        btnDeleteprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/productdelete-stroke.png")));
+        
+        pAV.removeAll();
+        pAV.validate();
+        pAV.repaint();
+        pAV.add(pDeletep);
+        pAV.revalidate();
+        pAV.repaint();
+    }//GEN-LAST:event_btnDeleteprdtMouseClicked
+
+    private void gobtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gobtnMouseClicked
+        
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(menu);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_gobtnMouseClicked
+
+    private void paintProductPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paintProductPanelMouseClicked
+        visibles();
+        
+        pAV.removeAll();
+        pAV.validate();
+        pAV.repaint();
+        pAV.add(pAddp);
+        pAV.revalidate();
+        pAV.repaint();
+    }//GEN-LAST:event_paintProductPanelMouseClicked
+
+    private void btnbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbackMouseClicked
+        btnAddprdt.setVisible(false);
+        btnViewprdt.setVisible(false);
+        btnDeleteprdt.setVisible(false);
+//        sidebar.setVisible(false);
+        
+        pAV.removeAll();
+        pAV.validate();
+        pAV.repaint();
+        pAV.add(menuPrdts);
+        pAV.revalidate();
+        pAV.repaint();
+    }//GEN-LAST:event_btnbackMouseClicked
+
+    private void editPrdtbtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editPrdtbtn2MouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnViewprdt1MouseClicked
+    }//GEN-LAST:event_editPrdtbtn2MouseClicked
 
-    private void editPrdtbtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editPrdtbtnMouseClicked
-        productType2.setEditable(true);
-        paintType2.setEditable(true);
-        paintCode2.setEditable(true);
-        litres2.setEditable(true);
-        paintColor2.setEditable(true);
-        sellingPrice2.setEditable(true);
-        costPrice2.setEditable(true);
-        masterCode2.setEditable(true);
-        producerName2.setEditable(true);
-        dateAdded2.setEditable(true);
-    }//GEN-LAST:event_editPrdtbtnMouseClicked
+    private void btnAddcustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddcustMouseClicked
+        btnAddcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersadd-stroke.png")));
+        btnViewcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersview-opaque.png")));
+        btnDeletecust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersdel-opaque.png")));
+        
+        cAV.removeAll();
+        cAV.validate();
+        cAV.repaint();
+        cAV.add(addCustomer);
+        cAV.revalidate();
+        cAV.repaint();
+    }//GEN-LAST:event_btnAddcustMouseClicked
+
+    private void btnViewcustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewcustMouseClicked
+        btnAddcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersadd-opaque.png")));
+        btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersview-stroke.png")));
+        btnDeletecust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersdel-opaque.png")));
+        
+        cAV.removeAll();
+        cAV.validate();
+        cAV.repaint();
+        cAV.add(viewCustomer);
+        cAV.revalidate();
+        cAV.repaint();
+    }//GEN-LAST:event_btnViewcustMouseClicked
+
+    private void btnDeletecustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeletecustMouseClicked
+        btnAddcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersadd-opaque.png")));
+        btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersview-opaque.png")));
+        btnDeletecust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersdel-stroke.png")));
+        
+        cAV.removeAll();
+        cAV.validate();
+        cAV.repaint();
+        cAV.add(deleteCustomer);
+        cAV.revalidate();
+        cAV.repaint();
+
+    }//GEN-LAST:event_btnDeletecustMouseClicked
+
+    private void editPrdtbtn3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editPrdtbtn3MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_editPrdtbtn3MouseClicked
+
+    private void bcgsearchBusinessMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bcgsearchBusinessMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bcgsearchBusinessMouseClicked
+
+    private void m_cutsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_m_cutsMouseClicked
+        btnAddcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersadd-stroke.png")));
+        
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(customers);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_m_cutsMouseClicked
+
+    private void custBackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_custBackMouseClicked
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(menu);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_custBackMouseClicked
+
+    private void otherProductPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_otherProductPanelMouseClicked
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(otherproducts);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_otherProductPanelMouseClicked
+
+    private void OtherprdtbtnDeleteMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OtherprdtbtnDeleteMouseClicked
+        OtherprdtbtnView.setIcon(new ImageIcon(getClass().getResource("/pack/image/SubMenu2.png")));
+        OtherprdtbtnAdd.setIcon(new ImageIcon(getClass().getResource("/pack/image/addPrdt.png")));
+        OtherprdtbtnDelete.setIcon(new ImageIcon(getClass().getResource("/pack/image/productdelete-stroke.png")));
+        
+        otherProductsPane.removeAll();
+        otherProductsPane.validate();
+        otherProductsPane.repaint();
+        otherProductsPane.add(deleteOtherproduct);
+        otherProductsPane.revalidate();
+        otherProductsPane.repaint();
+    }//GEN-LAST:event_OtherprdtbtnDeleteMouseClicked
+
+    private void OtherprdtbtnViewMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OtherprdtbtnViewMouseClicked
+        OtherprdtbtnDelete.setIcon(new ImageIcon(getClass().getResource("/pack/image/Productdel-opaque.png")));
+        OtherprdtbtnView.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewprdt.png")));
+        OtherprdtbtnAdd.setIcon(new ImageIcon(getClass().getResource("/pack/image/addPrdt.png")));
+        
+        otherProductsPane.removeAll();
+        otherProductsPane.validate();
+        otherProductsPane.repaint();
+        otherProductsPane.add(viewOtherproduct);
+        otherProductsPane.revalidate();
+        otherProductsPane.repaint();
+    }//GEN-LAST:event_OtherprdtbtnViewMouseClicked
+
+    private void OtherprdtbtnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OtherprdtbtnAddMouseClicked
+        OtherprdtbtnDelete.setIcon(new ImageIcon(getClass().getResource("/pack/image/Productdel-opaque.png")));
+        OtherprdtbtnView.setIcon(new ImageIcon(getClass().getResource("/pack/image/SubMenu2.png")));
+        OtherprdtbtnAdd.setIcon(new ImageIcon(getClass().getResource("/pack/image/SubMenu1.png")));
+        
+        otherProductsPane.removeAll();
+        otherProductsPane.validate();
+        otherProductsPane.repaint();
+        otherProductsPane.add(addOtherproduct);
+        otherProductsPane.revalidate();
+        otherProductsPane.repaint();
+    }//GEN-LAST:event_OtherprdtbtnAddMouseClicked
+
+    private void btnbackHomeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbackHomeMouseClicked
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(products);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+
+    }//GEN-LAST:event_btnbackHomeMouseClicked
+
+    private void paintDetbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paintDetbackMouseClicked
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(products);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_paintDetbackMouseClicked
+
+    private void paintDetailsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paintDetailsMouseClicked
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(paintDetail);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_paintDetailsMouseClicked
 
     /**
      * @param args the command line arguments
@@ -668,97 +2115,324 @@ public class test extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BcgCustwhite;
+    private javax.swing.JLabel BcgpaintDetailwhite;
+    private javax.swing.JLabel OtherprdtbtnAdd;
+    private javax.swing.JLabel OtherprdtbtnDelete;
+    private javax.swing.JLabel OtherprdtbtnView;
+    private javax.swing.JPanel addCustomer;
+    private javax.swing.JPanel addOtherproduct;
     private javax.swing.JLabel bcg;
     private javax.swing.JLabel bcg1;
     private javax.swing.JLabel bcg2;
     private javax.swing.JLabel bcg3;
+    private javax.swing.JLabel bcg4;
+    private javax.swing.JLabel bcg5;
+    private javax.swing.JLabel bcgBusinessSearch;
+    private javax.swing.JLabel bcgBusinessSearch2;
     private javax.swing.JLabel bcgDate;
+    private javax.swing.JLabel bcgDate1;
+    private javax.swing.JLabel bcgDate10;
+    private javax.swing.JLabel bcgDate11;
     private javax.swing.JLabel bcgDate2;
+    private javax.swing.JLabel bcgDate3;
+    private javax.swing.JLabel bcgDate4;
+    private javax.swing.JLabel bcgDate5;
+    private javax.swing.JLabel bcgDate6;
+    private javax.swing.JLabel bcgDate7;
+    private javax.swing.JLabel bcgDate8;
+    private javax.swing.JLabel bcgDate9;
+    private javax.swing.JLabel bcgPrice;
+    private javax.swing.JLabel bcgPrice1;
+    private javax.swing.JLabel bcgPrice2;
     private javax.swing.JLabel bcgWhite;
     private javax.swing.JLabel bcgWhite1;
     private javax.swing.JLabel bcgWhite2;
+    private javax.swing.JLabel bcgWhite3;
+    private javax.swing.JLabel bcgWhite4;
     private javax.swing.JLabel bcgcostp;
+    private javax.swing.JLabel bcgcostp1;
     private javax.swing.JLabel bcgcostp2;
+    private javax.swing.JLabel bcgcostp3;
+    private javax.swing.JLabel bcgcostp4;
+    private javax.swing.JLabel bcgcostp5;
+    private javax.swing.JLabel bcgcostp7;
+    private javax.swing.JLabel bcgcostp8;
+    private javax.swing.JLabel bcgcostp9;
     private javax.swing.JLabel bcgltrs;
+    private javax.swing.JLabel bcgltrs1;
     private javax.swing.JLabel bcgltrs2;
+    private javax.swing.JLabel bcgltrs3;
+    private javax.swing.JLabel bcgltrs4;
+    private javax.swing.JLabel bcgltrs5;
     private javax.swing.JLabel bcgmasCod;
+    private javax.swing.JLabel bcgmasCod1;
     private javax.swing.JLabel bcgmasCod2;
+    private javax.swing.JLabel bcgmasCod3;
+    private javax.swing.JLabel bcgmasCod4;
+    private javax.swing.JLabel bcgmasCod5;
+    private javax.swing.JLabel bcgmasCod7;
+    private javax.swing.JLabel bcgmasCod8;
+    private javax.swing.JLabel bcgmasCod9;
+    private javax.swing.JLabel bcgname1;
+    private javax.swing.JLabel bcgname2;
+    private javax.swing.JLabel bcgname3;
     private javax.swing.JLabel bcgpaCo;
+    private javax.swing.JLabel bcgpaCo1;
     private javax.swing.JLabel bcgpaCo2;
+    private javax.swing.JLabel bcgpaCo3;
+    private javax.swing.JLabel bcgpaCo4;
+    private javax.swing.JLabel bcgpaCo5;
     private javax.swing.JLabel bcgpaCol;
+    private javax.swing.JLabel bcgpaCol1;
     private javax.swing.JLabel bcgpaCol2;
+    private javax.swing.JLabel bcgpaCol3;
+    private javax.swing.JLabel bcgpaCol4;
+    private javax.swing.JLabel bcgpaCol5;
     private javax.swing.JLabel bcgpaTy;
+    private javax.swing.JLabel bcgpaTy1;
     private javax.swing.JLabel bcgpaTy2;
+    private javax.swing.JLabel bcgpaTy3;
+    private javax.swing.JLabel bcgpaTy4;
+    private javax.swing.JLabel bcgpaTy5;
+    private javax.swing.JLabel bcgpdPaintCode;
+    private javax.swing.JLabel bcgpdPaintColor;
+    private javax.swing.JLabel bcgpdPaintType;
+    private javax.swing.JLabel bcgpdProductType;
     private javax.swing.JLabel bcgproTy;
+    private javax.swing.JLabel bcgproTy1;
     private javax.swing.JLabel bcgproTy2;
+    private javax.swing.JLabel bcgproTy3;
+    private javax.swing.JLabel bcgproTy4;
+    private javax.swing.JLabel bcgproTy5;
     private javax.swing.JLabel bcgproducer;
+    private javax.swing.JLabel bcgproducer1;
     private javax.swing.JLabel bcgproducer2;
+    private javax.swing.JLabel bcgproducer3;
+    private javax.swing.JLabel bcgproducer4;
+    private javax.swing.JLabel bcgproducer5;
     private javax.swing.JLabel bcgproductAdd;
-    private javax.swing.JLabel bcgproductAdd2;
+    private javax.swing.JLabel bcgproductAdd1;
+    private javax.swing.JLabel bcgproductAdd3;
+    private javax.swing.JLabel bcgproductAdd4;
+    private javax.swing.JLabel bcgproductAdd5;
+    private javax.swing.JLabel bcgproductAdd7;
+    private javax.swing.JLabel bcgproductAdd8;
+    private javax.swing.JLabel bcgrate1;
+    private javax.swing.JLabel bcgrate2;
+    private javax.swing.JLabel bcgrate3;
+    private javax.swing.JLabel bcgsearch1;
+    private javax.swing.JLabel bcgsearch2;
+    private javax.swing.JLabel bcgsearch3;
+    private javax.swing.JLabel bcgsearch4;
+    private javax.swing.JLabel bcgsearchBusiness;
     private javax.swing.JLabel bcgsellP;
+    private javax.swing.JLabel bcgsellP1;
     private javax.swing.JLabel bcgsellP2;
+    private javax.swing.JLabel bcgsellP3;
+    private javax.swing.JLabel bcgsellP4;
+    private javax.swing.JLabel bcgsellP5;
+    private javax.swing.JLabel bcgtitle;
+    private javax.swing.JLabel bcgtitle2;
+    private javax.swing.JLabel bgIn1;
+    private javax.swing.JLabel bgIn2;
+    private javax.swing.JLabel bgIn3;
+    private javax.swing.JLabel bgotherproductType1;
+    private javax.swing.JLabel bgotherproductType2;
+    private javax.swing.JLabel bgotherproductType3;
+    private javax.swing.JLabel btnAddcust;
     private javax.swing.JLabel btnAddprdt;
-    private javax.swing.JLabel btnAddprdt1;
+    private javax.swing.JLabel btnDeletecust;
+    private javax.swing.JLabel btnDeleteprdt;
+    private javax.swing.JLabel btnViewcust;
     private javax.swing.JLabel btnViewprdt;
-    private javax.swing.JLabel btnViewprdt1;
     private javax.swing.JLabel btnback;
+    private javax.swing.JLabel btnbackHome;
+    private javax.swing.JTextField businessNameDelete;
+    private javax.swing.JPanel cAV;
+    private javax.swing.JLabel chevronDown;
+    private javax.swing.JLabel chevronDown1;
+    private javax.swing.JLabel chevronDown10;
+    private javax.swing.JLabel chevronDown2;
+    private javax.swing.JLabel chevronDown3;
+    private javax.swing.JLabel chevronDown4;
+    private javax.swing.JLabel chevronDown5;
+    private javax.swing.JLabel chevronDown6;
+    private javax.swing.JLabel chevronDown9;
+    private javax.swing.JLabel chevronUp;
+    private javax.swing.JLabel chevronUp1;
+    private javax.swing.JLabel chevronUp10;
+    private javax.swing.JLabel chevronUp2;
+    private javax.swing.JLabel chevronUp3;
+    private javax.swing.JLabel chevronUp4;
+    private javax.swing.JLabel chevronUp5;
+    private javax.swing.JLabel chevronUp6;
+    private javax.swing.JLabel chevronUp9;
     private javax.swing.JLabel clr;
     private javax.swing.JLabel clr1;
     private javax.swing.JLabel clr2;
     private javax.swing.JLabel clr3;
+    private javax.swing.JLabel clr4;
+    private javax.swing.JLabel clr5;
     private javax.swing.JTextField costPrice;
+    private javax.swing.JTextField costPrice1;
     private javax.swing.JTextField costPrice2;
+    private javax.swing.JTextField costPrice3;
+    private javax.swing.JTextField costPrice4;
+    private javax.swing.JTextField costPrice5;
+    private javax.swing.JLabel custBack;
+    private javax.swing.JPanel customers;
     private javax.swing.JTextField dateAdded;
+    private javax.swing.JTextField dateAdded1;
     private javax.swing.JTextField dateAdded2;
-    private javax.swing.JLabel editPrdtbtn;
+    private javax.swing.JTextField dateAdded3;
+    private javax.swing.JTextField dateAdded4;
+    private javax.swing.JTextField dateAdded5;
+    private javax.swing.JPanel deleteCustomer;
+    private javax.swing.JPanel deleteOtherproduct;
+    private javax.swing.JLabel deletebtnCustomer;
+    private javax.swing.JLabel editOtherproduct;
+    private javax.swing.JLabel editPrdtbtn1;
+    private javax.swing.JLabel editPrdtbtn2;
+    private javax.swing.JLabel editPrdtbtn3;
     private javax.swing.JPanel formPanel;
     private javax.swing.JLabel gobtn;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JTextField in1;
+    private javax.swing.JTextField in2;
+    private javax.swing.JTextField in3;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField10;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
+    private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
+    private javax.swing.JTextField jTextField9;
     private javax.swing.JTextField litres;
+    private javax.swing.JTextField litres1;
     private javax.swing.JTextField litres2;
+    private javax.swing.JTextField litres3;
+    private javax.swing.JTextField litres4;
+    private javax.swing.JTextField litres5;
+    private javax.swing.JLabel logo;
     private javax.swing.JLabel logoName;
     private javax.swing.JLabel m_cuts;
+    private javax.swing.JLabel m_invoice;
     private javax.swing.JLabel m_manAdm;
     private javax.swing.JLabel m_prdts;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JTextField masterCode;
+    private javax.swing.JTextField masterCode1;
     private javax.swing.JTextField masterCode2;
+    private javax.swing.JTextField masterCode3;
+    private javax.swing.JTextField masterCode4;
+    private javax.swing.JTextField masterCode5;
+    private javax.swing.JTextField masterCode7;
+    private javax.swing.JTextField masterCode8;
+    private javax.swing.JTextField masterCode9;
+    private javax.swing.JTextField masterSearch;
     private javax.swing.JPanel menu;
-    private javax.swing.JLabel menuProducts;
-    private javax.swing.JLabel menuProducts1;
+    private javax.swing.JPanel menuPrdts;
     private javax.swing.JLabel mock;
+    private javax.swing.JPanel modalView;
+    private javax.swing.JTextField otherProductCostPrice1;
+    private javax.swing.JTextField otherProductCostPrice2;
+    private javax.swing.JTextField otherProductCostPrice3;
+    private javax.swing.JLabel otherProductPanel;
+    private javax.swing.JTextField otherProductname1;
+    private javax.swing.JTextField otherProductname2;
+    private javax.swing.JTextField otherProductname3;
+    private javax.swing.JTextField otherProductrate1;
+    private javax.swing.JTextField otherProductrate2;
+    private javax.swing.JTextField otherProductrate3;
+    private javax.swing.JPanel otherProductsPane;
+    private javax.swing.JTextField otherProducttype1;
+    private javax.swing.JTextField otherProducttype2;
+    private javax.swing.JTextField otherProducttype3;
+    private javax.swing.JPanel otherproducts;
     private javax.swing.JPanel overview;
     private javax.swing.JPanel p1;
     private javax.swing.JPanel pAV;
     private javax.swing.JPanel pAddp;
-    private javax.swing.JPanel pVP;
+    private javax.swing.JPanel pDeletep;
     private javax.swing.JPanel pViewp;
+    private javax.swing.JPanel pViewp2;
+    private javax.swing.JPanel pViewp4;
+    private javax.swing.JPanel pViewp5;
     private javax.swing.JTextField paintCode;
+    private javax.swing.JTextField paintCode1;
     private javax.swing.JTextField paintCode2;
+    private javax.swing.JTextField paintCode3;
+    private javax.swing.JTextField paintCode4;
+    private javax.swing.JTextField paintCode5;
     private javax.swing.JTextField paintColor;
-    private javax.swing.JTextField paintColor2;
+    private javax.swing.JTextField paintColor3;
+    private javax.swing.JTextField paintColor4;
+    private javax.swing.JTextField paintColor5;
+    private javax.swing.JPanel paintDetail;
+    private javax.swing.JLabel paintDetails;
+    private javax.swing.JLabel paintDetback;
+    private javax.swing.JLabel paintProductPanel;
     private javax.swing.JTextField paintType;
-    private javax.swing.JTextField paintType2;
+    private javax.swing.JTextField paintType3;
+    private javax.swing.JTextField paintType4;
+    private javax.swing.JTextField paintType5;
+    private javax.swing.JTextField pdPaintCode;
+    private javax.swing.JTextField pdPaintColor;
+    private javax.swing.JTextField pdPaintType;
+    private javax.swing.JTextField pdProductType;
     private javax.swing.JTextField producerName;
+    private javax.swing.JTextField producerName1;
     private javax.swing.JTextField producerName2;
+    private javax.swing.JTextField producerName3;
+    private javax.swing.JTextField producerName4;
+    private javax.swing.JTextField producerName5;
     private javax.swing.JTextField productType;
-    private javax.swing.JTextField productType2;
+    private javax.swing.JTextField productType3;
+    private javax.swing.JTextField productType4;
+    private javax.swing.JTextField productType5;
     private javax.swing.JPanel products;
     private javax.swing.JPasswordField pword;
     private javax.swing.JLabel roundrect;
     private javax.swing.JLabel roundrect5;
-    private javax.swing.JScrollPane scrollVP;
+    private javax.swing.JLabel saveOtherproduct;
+    private javax.swing.JLabel searchBy;
+    private javax.swing.JLabel searchBy1;
+    private javax.swing.JLabel searchBy2;
+    private javax.swing.JPanel searchPanel;
+    private javax.swing.JPanel searchPanel1;
     private javax.swing.JTextField sellingPrice;
+    private javax.swing.JTextField sellingPrice1;
     private javax.swing.JTextField sellingPrice2;
+    private javax.swing.JTextField sellingPrice3;
+    private javax.swing.JTextField sellingPrice4;
+    private javax.swing.JTextField sellingPrice5;
     private javax.swing.JLabel settings;
-    private javax.swing.JPanel sidebar;
-    private javax.swing.JPanel sidebar1;
     private javax.swing.JPanel signinform;
+    private javax.swing.JLabel submit;
+    private javax.swing.JTextField txtBusinessName;
+    private javax.swing.JTextField txtBusinessName1;
+    private javax.swing.JTextField txtTitle;
+    private javax.swing.JTextField txtTitle1;
+    private javax.swing.JTextArea txtaddress;
+    private javax.swing.JTextArea txtaddress1;
     private javax.swing.JTextField uname;
-    private javax.swing.JPanel viewProducts;
+    private javax.swing.JPanel viewCustomer;
+    private javax.swing.JPanel viewOtherproduct;
+    private javax.swing.JPanel viewOtherproductEdit;
+    private javax.swing.JPanel viewsearchPanel;
     private javax.swing.JLabel whiteBcgg;
     private javax.swing.JLabel whiteBcgg1;
     // End of variables declaration//GEN-END:variables
