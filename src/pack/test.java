@@ -107,12 +107,19 @@ public class test extends javax.swing.JFrame {
         clr1 = new javax.swing.JLabel();
         bcgWhite = new javax.swing.JLabel();
         bcg1 = new javax.swing.JLabel();
-        products = new javax.swing.JPanel();
-        pAV = new javax.swing.JPanel();
+        mainmenuPrdt = new javax.swing.JPanel();
+        pAV1 = new javax.swing.JPanel();
         menuPrdts = new javax.swing.JPanel();
         paintProductPanel = new javax.swing.JLabel();
         otherProductPanel = new javax.swing.JLabel();
         paintDetails = new javax.swing.JLabel();
+        whiteBcgg2 = new javax.swing.JLabel();
+        btnback1 = new javax.swing.JLabel();
+        clr6 = new javax.swing.JLabel();
+        bcgWhite5 = new javax.swing.JLabel();
+        bcg6 = new javax.swing.JLabel();
+        products = new javax.swing.JPanel();
+        pAV = new javax.swing.JPanel();
         pAddp = new javax.swing.JPanel();
         dateAdded = new javax.swing.JTextField();
         producerName = new javax.swing.JTextField();
@@ -203,6 +210,7 @@ public class test extends javax.swing.JFrame {
         editPrdtbtn1 = new javax.swing.JLabel();
         bcgproductAdd3 = new javax.swing.JLabel();
         whiteBcgg = new javax.swing.JLabel();
+        logoProducts = new javax.swing.JLabel();
         btnDeleteprdt = new javax.swing.JLabel();
         btnViewprdt = new javax.swing.JLabel();
         btnAddprdt = new javax.swing.JLabel();
@@ -519,10 +527,10 @@ public class test extends javax.swing.JFrame {
 
         mainPanel.add(menu, "card5");
 
-        products.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        mainmenuPrdt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pAV.setOpaque(false);
-        pAV.setLayout(new java.awt.CardLayout());
+        pAV1.setOpaque(false);
+        pAV1.setLayout(new java.awt.CardLayout());
 
         menuPrdts.setOpaque(false);
         menuPrdts.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -554,7 +562,40 @@ public class test extends javax.swing.JFrame {
         });
         menuPrdts.add(paintDetails, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 110, -1, -1));
 
-        pAV.add(menuPrdts, "card5");
+        pAV1.add(menuPrdts, "card5");
+
+        mainmenuPrdt.add(pAV1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 130, 1080, 530));
+
+        whiteBcgg2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        whiteBcgg2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle1.png"))); // NOI18N
+        mainmenuPrdt.add(whiteBcgg2, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 140, -1, -1));
+
+        btnback1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnback1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Back.png"))); // NOI18N
+        btnback1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnback1MouseClicked(evt);
+            }
+        });
+        mainmenuPrdt.add(btnback1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1090, 60, -1, -1));
+
+        clr6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        clr6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
+        mainmenuPrdt.add(clr6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 710, -1, -1));
+
+        bcgWhite5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        bcgWhite5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle.png"))); // NOI18N
+        mainmenuPrdt.add(bcgWhite5, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, -1, -1));
+
+        bcg6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
+        mainmenuPrdt.add(bcg6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        mainPanel.add(mainmenuPrdt, "card4");
+
+        products.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        pAV.setOpaque(false);
+        pAV.setLayout(new java.awt.CardLayout());
 
         pAddp.setOpaque(false);
         pAddp.setPreferredSize(new java.awt.Dimension(1022, 492));
@@ -942,6 +983,10 @@ public class test extends javax.swing.JFrame {
         whiteBcgg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle1.png"))); // NOI18N
         products.add(whiteBcgg, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 140, -1, -1));
 
+        logoProducts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        logoProducts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/logo_1.png"))); // NOI18N
+        products.add(logoProducts, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, -1, -1));
+
         btnDeleteprdt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnDeleteprdt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Productdel-opaque.png"))); // NOI18N
         btnDeleteprdt.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -949,7 +994,7 @@ public class test extends javax.swing.JFrame {
                 btnDeleteprdtMouseClicked(evt);
             }
         });
-        products.add(btnDeleteprdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 70, -1, -1));
+        products.add(btnDeleteprdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 70, -1, -1));
 
         btnViewprdt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnViewprdt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/SubMenu2.png"))); // NOI18N
@@ -958,7 +1003,7 @@ public class test extends javax.swing.JFrame {
                 btnViewprdtMouseClicked(evt);
             }
         });
-        products.add(btnViewprdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(435, 70, -1, -1));
+        products.add(btnViewprdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 70, -1, -1));
 
         btnAddprdt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnAddprdt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/SubMenu1.png"))); // NOI18N
@@ -967,7 +1012,7 @@ public class test extends javax.swing.JFrame {
                 btnAddprdtMouseClicked(evt);
             }
         });
-        products.add(btnAddprdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, -1, -1));
+        products.add(btnAddprdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 70, -1, -1));
 
         btnback.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Back.png"))); // NOI18N
@@ -1866,15 +1911,11 @@ public class test extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAddprdtMouseClicked
 
     private void m_prdtsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_m_prdtsMouseClicked
-        btnAddprdt.setVisible(false);
-        btnViewprdt.setVisible(false);
-        btnDeleteprdt.setVisible(false);
-//        sidebar.setVisible(false);
         
         mainPanel.removeAll();
         mainPanel.validate();
         mainPanel.repaint();
-        mainPanel.add(products);
+        mainPanel.add(mainmenuPrdt);
         mainPanel.revalidate();
         mainPanel.repaint();
     }//GEN-LAST:event_m_prdtsMouseClicked
@@ -1907,28 +1948,26 @@ public class test extends javax.swing.JFrame {
     }//GEN-LAST:event_gobtnMouseClicked
 
     private void paintProductPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paintProductPanelMouseClicked
-        visibles();
         
-        pAV.removeAll();
-        pAV.validate();
-        pAV.repaint();
-        pAV.add(pAddp);
-        pAV.revalidate();
-        pAV.repaint();
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(products);
+        mainPanel.revalidate();
+        mainPanel.repaint();
     }//GEN-LAST:event_paintProductPanelMouseClicked
 
     private void btnbackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnbackMouseClicked
         btnAddprdt.setVisible(false);
         btnViewprdt.setVisible(false);
         btnDeleteprdt.setVisible(false);
-//        sidebar.setVisible(false);
         
-        pAV.removeAll();
-        pAV.validate();
-        pAV.repaint();
-        pAV.add(menuPrdts);
-        pAV.revalidate();
-        pAV.repaint();
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(mainmenuPrdt);
+        mainPanel.revalidate();
+        mainPanel.repaint();
     }//GEN-LAST:event_btnbackMouseClicked
 
     private void editPrdtbtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editPrdtbtn2MouseClicked
@@ -2055,7 +2094,7 @@ public class test extends javax.swing.JFrame {
         mainPanel.removeAll();
         mainPanel.validate();
         mainPanel.repaint();
-        mainPanel.add(products);
+        mainPanel.add(mainmenuPrdt);
         mainPanel.revalidate();
         mainPanel.repaint();
 
@@ -2065,7 +2104,7 @@ public class test extends javax.swing.JFrame {
         mainPanel.removeAll();
         mainPanel.validate();
         mainPanel.repaint();
-        mainPanel.add(products);
+        mainPanel.add(mainmenuPrdt);
         mainPanel.revalidate();
         mainPanel.repaint();
     }//GEN-LAST:event_paintDetbackMouseClicked
@@ -2078,6 +2117,15 @@ public class test extends javax.swing.JFrame {
         mainPanel.revalidate();
         mainPanel.repaint();
     }//GEN-LAST:event_paintDetailsMouseClicked
+
+    private void btnback1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnback1MouseClicked
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(menu);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_btnback1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -2128,6 +2176,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JLabel bcg3;
     private javax.swing.JLabel bcg4;
     private javax.swing.JLabel bcg5;
+    private javax.swing.JLabel bcg6;
     private javax.swing.JLabel bcgBusinessSearch;
     private javax.swing.JLabel bcgBusinessSearch2;
     private javax.swing.JLabel bcgDate;
@@ -2150,6 +2199,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JLabel bcgWhite2;
     private javax.swing.JLabel bcgWhite3;
     private javax.swing.JLabel bcgWhite4;
+    private javax.swing.JLabel bcgWhite5;
     private javax.swing.JLabel bcgcostp;
     private javax.swing.JLabel bcgcostp1;
     private javax.swing.JLabel bcgcostp2;
@@ -2247,6 +2297,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JLabel btnViewcust;
     private javax.swing.JLabel btnViewprdt;
     private javax.swing.JLabel btnback;
+    private javax.swing.JLabel btnback1;
     private javax.swing.JLabel btnbackHome;
     private javax.swing.JTextField businessNameDelete;
     private javax.swing.JPanel cAV;
@@ -2274,6 +2325,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JLabel clr3;
     private javax.swing.JLabel clr4;
     private javax.swing.JLabel clr5;
+    private javax.swing.JLabel clr6;
     private javax.swing.JTextField costPrice;
     private javax.swing.JTextField costPrice1;
     private javax.swing.JTextField costPrice2;
@@ -2328,11 +2380,13 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JTextField litres5;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel logoName;
+    private javax.swing.JLabel logoProducts;
     private javax.swing.JLabel m_cuts;
     private javax.swing.JLabel m_invoice;
     private javax.swing.JLabel m_manAdm;
     private javax.swing.JLabel m_prdts;
     private javax.swing.JPanel mainPanel;
+    private javax.swing.JPanel mainmenuPrdt;
     private javax.swing.JTextField masterCode;
     private javax.swing.JTextField masterCode1;
     private javax.swing.JTextField masterCode2;
@@ -2365,6 +2419,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JPanel overview;
     private javax.swing.JPanel p1;
     private javax.swing.JPanel pAV;
+    private javax.swing.JPanel pAV1;
     private javax.swing.JPanel pAddp;
     private javax.swing.JPanel pDeletep;
     private javax.swing.JPanel pViewp;
@@ -2435,5 +2490,6 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JPanel viewsearchPanel;
     private javax.swing.JLabel whiteBcgg;
     private javax.swing.JLabel whiteBcgg1;
+    private javax.swing.JLabel whiteBcgg2;
     // End of variables declaration//GEN-END:variables
 }
