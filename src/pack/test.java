@@ -65,7 +65,7 @@ public class test extends javax.swing.JFrame {
     
     public void visibles(){
         //sidebar.setVisible(true);
-//        btnAddprdt.setVisible(true);
+        btnAddprdt.setVisible(true);
         btnViewprdt.setVisible(true);
 //        sidebar.setVisible(true);
     }
@@ -187,6 +187,7 @@ public class test extends javax.swing.JFrame {
         labelSearchprdt = new javax.swing.JLabel();
         clear = new javax.swing.JLabel();
         btnViewprdt = new javax.swing.JLabel();
+        btnAddprdt = new javax.swing.JLabel();
         btnback = new javax.swing.JLabel();
         clr2 = new javax.swing.JLabel();
         bcgWhite1 = new javax.swing.JLabel();
@@ -504,6 +505,11 @@ public class test extends javax.swing.JFrame {
 
         paint_products.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         paint_products.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/products.png"))); // NOI18N
+        paint_products.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                paint_productsMouseClicked(evt);
+            }
+        });
         mainmenuPrdt.add(paint_products, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 237, 232));
 
         Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Back.png"))); // NOI18N
@@ -685,7 +691,7 @@ public class test extends javax.swing.JFrame {
         jTable1.setOpaque(false);
         jScrollPane1.setViewportView(jTable1);
 
-        searchPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 860, 390));
+        searchPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 980, 470));
 
         pViewp2.add(searchPanel, "card3");
 
@@ -827,6 +833,15 @@ public class test extends javax.swing.JFrame {
             }
         });
         products.add(btnViewprdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, -1, -1));
+
+        btnAddprdt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnAddprdt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/addbtn.png"))); // NOI18N
+        btnAddprdt.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnAddprdtMouseClicked(evt);
+            }
+        });
+        products.add(btnAddprdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, -1, -1));
 
         btnback.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Back.png"))); // NOI18N
@@ -1606,6 +1621,20 @@ public class test extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnAddprdtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddprdtMouseClicked
+        btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewbtn.png")));
+        btnAddprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/addbtnStroke.png")));
+        searchText.setVisible(false);
+        labelSearchprdt.setVisible(false);
+        
+        pAV.removeAll();
+        pAV.validate();
+        pAV.repaint();
+        pAV.add(pAddp);
+        pAV.revalidate();
+        pAV.repaint();
+    }//GEN-LAST:event_btnAddprdtMouseClicked
+
     private void m_prdtsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_m_prdtsMouseClicked
         
         mainPanel.removeAll();
@@ -1637,8 +1666,8 @@ public class test extends javax.swing.JFrame {
     }//GEN-LAST:event_btnbackMouseClicked
 
     private void btnAddcustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddcustMouseClicked
-        btnAddcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersadd-stroke.png")));
-        btnViewcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersview-opaque.png")));
+        btnAddcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/addbtnStroke.png")));
+        btnViewcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewbtn.png")));
         
         cAV.removeAll();
         cAV.validate();
@@ -1649,8 +1678,8 @@ public class test extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAddcustMouseClicked
 
     private void btnViewcustMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewcustMouseClicked
-        btnAddcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersadd-opaque.png")));
-        btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersview-stroke.png")));
+        btnAddcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/addOpaque.png")));
+        btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewstroke.png")));
         
         cAV.removeAll();
         cAV.validate();
@@ -1669,7 +1698,7 @@ public class test extends javax.swing.JFrame {
     }//GEN-LAST:event_bcgsearchBusinessMouseClicked
 
     private void m_cutsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_m_cutsMouseClicked
-        btnAddcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersadd-stroke.png")));
+//        btnAddcust.setIcon(new ImageIcon(getClass().getResource("/pack/image/Customersadd-stroke.png")));
         
         mainPanel.removeAll();
         mainPanel.validate();
@@ -1690,8 +1719,8 @@ public class test extends javax.swing.JFrame {
 
     private void OtherprdtbtnViewMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OtherprdtbtnViewMouseClicked
 
-        OtherprdtbtnView.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewprdt.png")));
-        OtherprdtbtnAdd.setIcon(new ImageIcon(getClass().getResource("/pack/image/addPrdt.png")));
+        OtherprdtbtnView.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewStroke.png")));
+        OtherprdtbtnAdd.setIcon(new ImageIcon(getClass().getResource("/pack/image/addOpaque.png")));
         
         otherProductsPane.removeAll();
         otherProductsPane.validate();
@@ -1703,8 +1732,8 @@ public class test extends javax.swing.JFrame {
 
     private void OtherprdtbtnAddMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_OtherprdtbtnAddMouseClicked
        
-        OtherprdtbtnView.setIcon(new ImageIcon(getClass().getResource("/pack/image/SubMenu2.png")));
-        OtherprdtbtnAdd.setIcon(new ImageIcon(getClass().getResource("/pack/image/SubMenu1.png")));
+        OtherprdtbtnView.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewbtn.png")));
+        OtherprdtbtnAdd.setIcon(new ImageIcon(getClass().getResource("/pack/image/addbtnStroke.png")));
         
         otherProductsPane.removeAll();
         otherProductsPane.validate();
@@ -1745,7 +1774,7 @@ public class test extends javax.swing.JFrame {
 
     private void btnViewprdtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewprdtMouseClicked
         btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewStroke.png")));
-//        btnAddprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/addOpaque.png")));
+        btnAddprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/addOpaque.png")));
         
         pAV.removeAll();
         pAV.validate();
@@ -1758,6 +1787,15 @@ public class test extends javax.swing.JFrame {
     private void editPrdtbtn2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editPrdtbtn2MouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_editPrdtbtn2MouseClicked
+
+    private void paint_productsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paint_productsMouseClicked
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(products);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_paint_productsMouseClicked
 
     /**
      * @param args the command line arguments
@@ -1899,6 +1937,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JLabel bgotherproductType1;
     private javax.swing.JLabel bgotherproductType3;
     private javax.swing.JLabel btnAddcust;
+    private javax.swing.JLabel btnAddprdt;
     private javax.swing.JLabel btnViewcust;
     private javax.swing.JLabel btnViewprdt;
     private javax.swing.JLabel btnback;
