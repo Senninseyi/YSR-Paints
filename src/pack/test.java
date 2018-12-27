@@ -65,7 +65,7 @@ public class test extends javax.swing.JFrame {
     
     public void visibles(){
         //sidebar.setVisible(true);
-        btnAddprdt.setVisible(true);
+//        btnAddprdt.setVisible(true);
         btnViewprdt.setVisible(true);
 //        sidebar.setVisible(true);
     }
@@ -187,7 +187,6 @@ public class test extends javax.swing.JFrame {
         labelSearchprdt = new javax.swing.JLabel();
         clear = new javax.swing.JLabel();
         btnViewprdt = new javax.swing.JLabel();
-        btnAddprdt = new javax.swing.JLabel();
         btnback = new javax.swing.JLabel();
         clr2 = new javax.swing.JLabel();
         bcgWhite1 = new javax.swing.JLabel();
@@ -828,15 +827,6 @@ public class test extends javax.swing.JFrame {
             }
         });
         products.add(btnViewprdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 70, -1, -1));
-
-        btnAddprdt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnAddprdt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/addbtn.png"))); // NOI18N
-        btnAddprdt.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnAddprdtMouseClicked(evt);
-            }
-        });
-        products.add(btnAddprdt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, -1, -1));
 
         btnback.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         btnback.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Back.png"))); // NOI18N
@@ -1616,20 +1606,6 @@ public class test extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAddprdtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAddprdtMouseClicked
-        btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewbtn.png")));
-        btnAddprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/addbtnStroke.png")));
-        searchText.setVisible(false);
-        labelSearchprdt.setVisible(false);
-        
-        pAV.removeAll();
-        pAV.validate();
-        pAV.repaint();
-        pAV.add(pAddp);
-        pAV.revalidate();
-        pAV.repaint();
-    }//GEN-LAST:event_btnAddprdtMouseClicked
-
     private void m_prdtsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_m_prdtsMouseClicked
         
         mainPanel.removeAll();
@@ -1769,7 +1745,7 @@ public class test extends javax.swing.JFrame {
 
     private void btnViewprdtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewprdtMouseClicked
         btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewStroke.png")));
-        btnAddprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/addOpaque.png")));
+//        btnAddprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/addOpaque.png")));
         
         pAV.removeAll();
         pAV.validate();
@@ -1923,7 +1899,6 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JLabel bgotherproductType1;
     private javax.swing.JLabel bgotherproductType3;
     private javax.swing.JLabel btnAddcust;
-    private javax.swing.JLabel btnAddprdt;
     private javax.swing.JLabel btnViewcust;
     private javax.swing.JLabel btnViewprdt;
     private javax.swing.JLabel btnback;
