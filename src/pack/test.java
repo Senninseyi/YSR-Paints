@@ -96,15 +96,25 @@ public class test extends javax.swing.JFrame {
         logoName = new javax.swing.JLabel();
         clr = new javax.swing.JLabel();
         bcg = new javax.swing.JLabel();
+        login = new javax.swing.JPanel();
+        Name = new javax.swing.JLabel();
+        right = new javax.swing.JLabel();
+        future_us = new javax.swing.JLabel();
+        log_out = new javax.swing.JLabel();
+        open_app = new javax.swing.JLabel();
+        user = new javax.swing.JLabel();
+        inventory = new javax.swing.JLabel();
+        bg = new javax.swing.JLabel();
         menu = new javax.swing.JPanel();
         p1 = new javax.swing.JPanel();
+        price = new javax.swing.JLabel();
         m_prdts = new javax.swing.JLabel();
         m_cuts = new javax.swing.JLabel();
         m_manAdm = new javax.swing.JLabel();
         m_invoice = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        Logged_in = new javax.swing.JLabel();
+        other_products = new javax.swing.JLabel();
+        back = new javax.swing.JLabel();
+        Logout = new javax.swing.JLabel();
         clr1 = new javax.swing.JLabel();
         bcgWhite = new javax.swing.JLabel();
         bcg1 = new javax.swing.JLabel();
@@ -474,10 +484,54 @@ public class test extends javax.swing.JFrame {
 
         mainPanel.add(overview, "card3");
 
+        login.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        Name.setBackground(new java.awt.Color(255, 255, 255));
+        Name.setFont(new java.awt.Font("Futura Md BT", 0, 30)); // NOI18N
+        Name.setForeground(new java.awt.Color(255, 255, 255));
+        Name.setText("Mr. John Adewale");
+        login.add(Name, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 310, 251, 40));
+
+        right.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/settings.png"))); // NOI18N
+        login.add(right, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 370, 50, 50));
+
+        future_us.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
+        login.add(future_us, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 700, 343, 22));
+
+        log_out.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/logout.png"))); // NOI18N
+        log_out.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                log_outMouseClicked(evt);
+            }
+        });
+        login.add(log_out, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 370, 127, 54));
+
+        open_app.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/open_app.png"))); // NOI18N
+        open_app.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                open_appMouseClicked(evt);
+            }
+        });
+        login.add(open_app, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 370, 127, 54));
+
+        user.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/user.png"))); // NOI18N
+        login.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 270, 196, 196));
+
+        inventory.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Inventory Management.png"))); // NOI18N
+        login.add(inventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(31, 19, 424, 54));
+
+        bg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
+        login.add(bg, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        mainPanel.add(login, "card9");
+
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         p1.setOpaque(false);
         p1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        price.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/coins.png"))); // NOI18N
+        p1.add(price, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 370, 118, 118));
 
         m_prdts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         m_prdts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/products.png"))); // NOI18N
@@ -489,7 +543,7 @@ public class test extends javax.swing.JFrame {
         p1.add(m_prdts, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
 
         m_cuts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        m_cuts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/customers.png"))); // NOI18N
+        m_cuts.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/customers_menu.png"))); // NOI18N
         m_cuts.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 m_cutsMouseClicked(evt);
@@ -505,20 +559,27 @@ public class test extends javax.swing.JFrame {
         m_invoice.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/invoice.png"))); // NOI18N
         p1.add(m_invoice, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
 
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/menu.png"))); // NOI18N
-        p1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 330, -1, -1));
+        other_products.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        other_products.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/price.png"))); // NOI18N
+        p1.add(other_products, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, -1, -1));
 
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/menu.png"))); // NOI18N
-        p1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 330, -1, -1));
+        back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Back.png"))); // NOI18N
+        back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                backMouseClicked(evt);
+            }
+        });
+        p1.add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 550, 110, 110));
 
         menu.add(p1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 50, 1160, 620));
 
-        Logged_in.setFont(new java.awt.Font("Futura Md BT", 0, 18)); // NOI18N
-        Logged_in.setForeground(new java.awt.Color(255, 255, 255));
-        Logged_in.setText("Logged in as:");
-        menu.add(Logged_in, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 10, 110, 30));
+        Logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/logout.png"))); // NOI18N
+        Logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                LogoutMouseClicked(evt);
+            }
+        });
+        menu.add(Logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 700, 127, 54));
 
         clr1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         clr1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
@@ -1844,7 +1905,7 @@ public class test extends javax.swing.JFrame {
 
         bcgWhite2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         bcgWhite2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle.png"))); // NOI18N
-        customers.add(bcgWhite2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, -1, -1));
+        customers.add(bcgWhite2, new org.netbeans.lib.awtextra.AbsoluteConstraints(5, 0, 1280, -1));
 
         bcg4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
         customers.add(bcg4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -1862,7 +1923,7 @@ public class test extends javax.swing.JFrame {
             .addComponent(mainPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setBounds(0, 0, 1280, 780);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnViewprdtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewprdtMouseClicked
@@ -1919,11 +1980,12 @@ public class test extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeleteprdtMouseClicked
 
     private void gobtnMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_gobtnMouseClicked
+        //Going to Login Panel
         
         mainPanel.removeAll();
         mainPanel.validate();
         mainPanel.repaint();
-        mainPanel.add(menu);
+        mainPanel.add(login);
         mainPanel.revalidate();
         mainPanel.repaint();
     }//GEN-LAST:event_gobtnMouseClicked
@@ -2078,6 +2140,50 @@ public class test extends javax.swing.JFrame {
         mainPanel.repaint();
     }//GEN-LAST:event_BackMouseClicked
 
+    private void open_appMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_open_appMouseClicked
+        // Going to Menu Panel
+        
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(menu);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_open_appMouseClicked
+
+    private void backMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_backMouseClicked
+        // Going to login Panel
+        
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(login);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_backMouseClicked
+
+    private void LogoutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogoutMouseClicked
+        // Logout
+        
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(overview);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_LogoutMouseClicked
+
+    private void log_outMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_log_outMouseClicked
+        // Logout
+        
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(overview);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_log_outMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -2117,13 +2223,15 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JLabel Back;
     private javax.swing.JLabel BcgCustwhite;
     private javax.swing.JLabel BcgpaintDetailwhite;
-    private javax.swing.JLabel Logged_in;
+    private javax.swing.JLabel Logout;
+    private javax.swing.JLabel Name;
     private javax.swing.JLabel OtherprdtbtnAdd;
     private javax.swing.JLabel OtherprdtbtnDelete;
     private javax.swing.JLabel OtherprdtbtnView;
     private javax.swing.JLabel Sidebar;
     private javax.swing.JPanel addCustomer;
     private javax.swing.JPanel addOtherproduct;
+    private javax.swing.JLabel back;
     private javax.swing.JLabel bcg;
     private javax.swing.JLabel bcg1;
     private javax.swing.JLabel bcg2;
@@ -2237,6 +2345,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JLabel bcgsellP5;
     private javax.swing.JLabel bcgtitle;
     private javax.swing.JLabel bcgtitle2;
+    private javax.swing.JLabel bg;
     private javax.swing.JLabel bgIn1;
     private javax.swing.JLabel bgIn2;
     private javax.swing.JLabel bgIn3;
@@ -2302,12 +2411,12 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JTextField email;
     private javax.swing.JLabel email_label;
     private javax.swing.JPanel formPanel;
+    private javax.swing.JLabel future_us;
     private javax.swing.JLabel gobtn;
     private javax.swing.JTextField in1;
     private javax.swing.JTextField in2;
     private javax.swing.JTextField in3;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel inventory;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -2332,6 +2441,8 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JTextField litres3;
     private javax.swing.JTextField litres4;
     private javax.swing.JTextField litres5;
+    private javax.swing.JLabel log_out;
+    private javax.swing.JPanel login;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel logoName;
     private javax.swing.JLabel logout;
@@ -2354,6 +2465,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JPanel menu;
     private javax.swing.JLabel mock;
     private javax.swing.JPanel modalView;
+    private javax.swing.JLabel open_app;
     private javax.swing.JTextField otherProductCostPrice1;
     private javax.swing.JTextField otherProductCostPrice2;
     private javax.swing.JTextField otherProductCostPrice3;
@@ -2367,6 +2479,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JTextField otherProducttype1;
     private javax.swing.JTextField otherProducttype2;
     private javax.swing.JTextField otherProducttype3;
+    private javax.swing.JLabel other_products;
     private javax.swing.JPanel otherproducts;
     private javax.swing.JPanel overview;
     private javax.swing.JPanel p1;
@@ -2401,6 +2514,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JTextField pdPaintColor;
     private javax.swing.JTextField pdPaintType;
     private javax.swing.JTextField pdProductType;
+    private javax.swing.JLabel price;
     private javax.swing.JTextField producerName;
     private javax.swing.JTextField producerName1;
     private javax.swing.JTextField producerName2;
@@ -2414,6 +2528,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JLabel product_label;
     private javax.swing.JLabel product_txt;
     private javax.swing.JPanel products;
+    private javax.swing.JLabel right;
     private javax.swing.JLabel saveOtherproduct;
     private javax.swing.JLabel searchBy;
     private javax.swing.JLabel searchBy1;
@@ -2436,6 +2551,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JTextField txtTitle1;
     private javax.swing.JTextArea txtaddress;
     private javax.swing.JTextArea txtaddress1;
+    private javax.swing.JLabel user;
     private javax.swing.JPanel viewCustomer;
     private javax.swing.JPanel viewOtherproduct;
     private javax.swing.JPanel viewOtherproductEdit;
