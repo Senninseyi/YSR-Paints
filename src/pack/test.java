@@ -61,6 +61,11 @@ public class test extends javax.swing.JFrame {
         holder = new PlaceHolder(pdPaintColor, "e.g. Red");
         holder = new PlaceHolder(pdPaintCode,"e.g. 1712");
         //place holder for paint-details
+        
+        //placeholder for signin
+        holder = new PlaceHolder(email, "someone@xyz.com");
+        holder = new PlaceHolder(password_field, "enter your pass word");
+        //placeholder for signin
     }
     
     public void visibles(){
