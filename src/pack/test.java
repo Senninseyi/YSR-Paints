@@ -109,6 +109,7 @@ public class test extends javax.swing.JFrame {
         bcgWhite = new javax.swing.JLabel();
         bcg1 = new javax.swing.JLabel();
         mainmenuPrdt = new javax.swing.JPanel();
+        logout = new javax.swing.JLabel();
         shopping_bag = new javax.swing.JLabel();
         product_txt = new javax.swing.JLabel();
         paint_customers = new javax.swing.JLabel();
@@ -534,12 +535,15 @@ public class test extends javax.swing.JFrame {
 
         mainmenuPrdt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        logout.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/logout.png"))); // NOI18N
+        mainmenuPrdt.add(logout, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 670, 127, 54));
+
         shopping_bag.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         shopping_bag.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/shopping-bag.png"))); // NOI18N
         mainmenuPrdt.add(shopping_bag, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 270, 117, 117));
 
         product_txt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Products_txt.png"))); // NOI18N
-        mainmenuPrdt.add(product_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 103, 36));
+        mainmenuPrdt.add(product_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, 103, 36));
 
         paint_customers.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         paint_customers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/customers2.png"))); // NOI18N
@@ -555,18 +559,18 @@ public class test extends javax.swing.JFrame {
                 BackMouseClicked(evt);
             }
         });
-        mainmenuPrdt.add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 580, 130, 150));
+        mainmenuPrdt.add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 560, 130, 150));
 
         Sidebar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Sidebar.png"))); // NOI18N
-        mainmenuPrdt.add(Sidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 55, 54));
+        mainmenuPrdt.add(Sidebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 60, 55, 54));
 
         product_label.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         product_label.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Rectangle.png"))); // NOI18N
-        mainmenuPrdt.add(product_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 1250, 700));
+        mainmenuPrdt.add(product_label, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, 1250, 700));
 
         clr6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         clr6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/2018 ©ysr company li.png"))); // NOI18N
-        mainmenuPrdt.add(clr6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 710, -1, -1));
+        mainmenuPrdt.add(clr6, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 690, -1, -1));
 
         bcg6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Group.png"))); // NOI18N
         mainmenuPrdt.add(bcg6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -2330,6 +2334,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JTextField litres5;
     private javax.swing.JLabel logo;
     private javax.swing.JLabel logoName;
+    private javax.swing.JLabel logout;
     private javax.swing.JLabel m_cuts;
     private javax.swing.JLabel m_invoice;
     private javax.swing.JLabel m_manAdm;
