@@ -545,6 +545,11 @@ public class test extends javax.swing.JFrame {
         mainmenuPrdt.add(paint_products, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 237, 232));
 
         Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Back.png"))); // NOI18N
+        Back.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                BackMouseClicked(evt);
+            }
+        });
         mainmenuPrdt.add(Back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1080, 580, 130, 150));
 
         Sidebar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Sidebar.png"))); // NOI18N
@@ -2053,6 +2058,16 @@ public class test extends javax.swing.JFrame {
         mainPanel.revalidate();
         mainPanel.repaint();
     }//GEN-LAST:event_paintDetbackMouseClicked
+
+    private void BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseClicked
+        // Going Back to Menu Panel
+        mainPanel.removeAll();
+        mainPanel.validate();
+        mainPanel.repaint();
+        mainPanel.add(menu);
+        mainPanel.revalidate();
+        mainPanel.repaint();
+    }//GEN-LAST:event_BackMouseClicked
 
     /**
      * @param args the command line arguments
