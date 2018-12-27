@@ -109,6 +109,7 @@ public class test extends javax.swing.JFrame {
         bcgWhite = new javax.swing.JLabel();
         bcg1 = new javax.swing.JLabel();
         mainmenuPrdt = new javax.swing.JPanel();
+        shopping_bag = new javax.swing.JLabel();
         product_txt = new javax.swing.JLabel();
         paint_customers = new javax.swing.JLabel();
         paint_products = new javax.swing.JLabel();
@@ -533,11 +534,15 @@ public class test extends javax.swing.JFrame {
 
         mainmenuPrdt.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        shopping_bag.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        shopping_bag.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/shopping-bag.png"))); // NOI18N
+        mainmenuPrdt.add(shopping_bag, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 270, 117, 117));
+
         product_txt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/Products_txt.png"))); // NOI18N
         mainmenuPrdt.add(product_txt, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 103, 36));
 
         paint_customers.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        paint_customers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/customers.png"))); // NOI18N
+        paint_customers.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pack/image/customers2.png"))); // NOI18N
         mainmenuPrdt.add(paint_customers, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 220, 237, 232));
 
         paint_products.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -2417,6 +2422,7 @@ public class test extends javax.swing.JFrame {
     private javax.swing.JTextField sellingPrice4;
     private javax.swing.JTextField sellingPrice5;
     private javax.swing.JLabel settings;
+    private javax.swing.JLabel shopping_bag;
     private javax.swing.JPanel signinform;
     private javax.swing.JLabel submit;
     private javax.swing.JTextField txtBusinessName;
