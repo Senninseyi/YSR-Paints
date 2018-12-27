@@ -1775,6 +1775,8 @@ public class test extends javax.swing.JFrame {
     private void btnViewprdtMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnViewprdtMouseClicked
         btnViewprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/viewStroke.png")));
         btnAddprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/addOpaque.png")));
+        labelSearchprdt.setVisible(true);
+        searchText.setVisible(true);
         
         pAV.removeAll();
         pAV.validate();
@@ -1790,6 +1792,8 @@ public class test extends javax.swing.JFrame {
 
     private void paint_productsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paint_productsMouseClicked
         btnAddprdt.setIcon(new ImageIcon(getClass().getResource("/pack/image/addbtnStroke.png")));
+        labelSearchprdt.setVisible(false);
+        searchText.setVisible(false);
         
         mainPanel.removeAll();
         mainPanel.validate();
